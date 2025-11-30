@@ -1,0 +1,81 @@
+# DA-Yonezu — DreamArc Artist-Lab Module
+# Style: 米津玄師構文（Yonezu-Style v1.0）
+# Category: 主力アーティスト構文
+# Version: ArtistLab v1.0
+# Last-Update: 2025-12-01
+
+Meta:
+  Name: "DA-Yonezu"
+  Model: "Artist-Lab"
+  ArtistReference: "Yonezu Kenshi Inspired Style"
+  Version: "1.0"
+  Type: "Core-Artist-Style"
+  Tags:
+    - JP-Pop
+    - Alt-Pop
+    - EmotionalDepth
+    - HauntingMelody
+    - Storytelling
+    - ExperimentalRhythm
+    - DreamArc-Core-Compatible
+
+VocalStyle:
+  Tone: "SoftDark"
+  Color: "SlightHusky"
+  EmotionCore: "UnderstatedPain"
+  RangeFocus: "Mid〜High"
+  Vibrato: "Subtle"
+  Attack: "GentleEdge"
+  Expression:
+    - "WhisperToneAllowed"
+    - "EmotionReserved"
+    - "WordsCarryWeight"
+
+Composition:
+  BPM: "70〜138"
+  KeyPreference: ["Em", "Dm", "Bm", "F#m"]
+  ChordSignature:
+    - "i–VI–III–VII"
+    - "i–iv–V–i"
+    - "III–VII–i"
+  MelodyProfile:
+    - "IntervalLeapsAllowed"
+    - "FalsettoSwitching"
+    - "DescendingSadCadence"
+  Rhythm:
+    - "SyncopationLight"
+    - "SparseKick"
+    - "AmbientBeat"
+
+LyricsDirectives:
+  Theme:
+    - "孤独／喪失／心象風景"
+    - "自己対話"
+    - "都市の孤独・静寂"
+    - "曖昧で詩的な比喩"
+  StyleKeywords:
+    - "比喩多め"
+    - "抽象表現"
+    - "余白のある言葉選び"
+    - "連想的な情景"
+  Avoid:
+    - "直接的すぎる愛表現"
+    - "派手すぎる比喩"
+    - "幸福一辺倒の表現"
+
+SunoCompatibility:
+  VowelControl: "PhonemeAssist-v2.2"
+  SoftConsonants: true
+  WhisperSafe: true
+  EmotionOverflow: "E2-E5 range"
+
+PromptTemplate:
+  - "Yonezu-Kenshi inspired emotional JP-Pop"
+  - "Alt-Pop, SoftDarkVocal, HauntingMelody"
+  - "PoeticImagery, AbstractMetaphor, StorytellingDepth"
+  - "BPM:{BPM}, Key:{Key}"
+  - "DreamArc Artist-Lab Module"
+
+Notes:
+  - "このモジュールは特定人物の模倣ではなく、抽象化されたスタイル表現です。"
+  - "DASF v2.2-PhonemeAssist 対応。"
