@@ -1,0 +1,75 @@
+# DA-YOASOBI Syntax Module
+# DreamArc-Core / SyntaxModules
+# Style: YOASOBI / HopModel-B / Story-driven Pop
+
+module:
+  name: "DA-YOASOBI"
+  version: "4.1-SCT"
+  category: "StoryTech-Pop"
+  description: >
+    YOASOBI-style structure featuring hopModel=B, selective separator usage,
+    tight syllable flow, emotionally progressive narrative development,
+    and controlled rhythmic accents aligned with modern JP-pop storytelling.
+
+rhythm:
+  hop_model: "B"
+  separator_rules:
+    enabled: true
+    usage_condition: "YOASOBI指定時のみ"
+    symbol: "・"
+    restrictions:
+      - "全モーラ分割は禁止"
+      - "語頭・アクセント位置のみ跳ね"
+      - "語中はスラー処理"
+      - "語尾は軽く保持"
+
+  flow_density: "medium-high"
+  swing_bias: "low"
+  articulation: "smooth"
+  bpm_preference: [122, 128, 132]
+
+melody:
+  tone_profile:
+    clarity: "high"
+    accent_behavior: "phrase-linked"
+    vibrato_usage: "minimal"
+    pitch_jump: "controlled"
+
+  emotional_shape:
+    verse: "calm"
+    pre_chorus: "build"
+    chorus: "expansion"
+
+lyric_guidelines:
+  narrative_focus: true
+  viewpoint_shift: "allowed"
+  sentence_flow: "continuous"
+  story_tags_enabled: true
+
+  word_choice:
+    tone: "literary-modern"
+    allow_metaphor: true
+    avoid:
+      - "過度な絶叫ワード"
+      - "メタル用語"
+      - "過度に抽象的すぎる表現"
+
+  line_structure:
+    verse_line_length: "medium"
+    chorus_density: "very-high"
+    flow_connectivity: "tight"
+
+output_behavior:
+  emotional_curve: "E1 → E3 → E5 → E4"
+  clarity_priority: true
+  enable_phonemeassist: true
+
+compatibility:
+  dasf: "2.2-PhonemeAssist"
+  exclude_engine: "3.0"
+  quickload: "4.1-GA"
+
+notes:
+  - "適度な跳ね＋物語密度が最適バランス。"
+  - "YOASOBI指定時のみ separator が有効化される。"
+  - "物語系サウンドトラックやJP-popに高適性。"
