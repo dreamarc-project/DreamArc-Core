@@ -1,0 +1,47 @@
+module: DA-Anison-Battle
+version: 1.0.0
+description: >
+  王道アニソンのバトル・激闘・覚醒シーン向け構文OS。
+  強い推進力、英雄的スケール、感情爆発、覚悟の表現を得意とする。
+
+style:
+  energy: UltraHigh
+  emotion_curve: Rise→Burst→Resolve
+  phonemeassist: v2.2
+  separator_rules: Off
+
+rhythm:
+  bpm_range: [148, 178]
+  feel: Drive
+  syncopation: Medium
+  accent: StrongAttack
+
+melody:
+  contour: Wide
+  leap_usage: High
+  sustain: Controlled
+  vibrato: StrongButClean
+
+lyrics_rules:
+  language: JP
+  script: Hiragana
+  interlude_tag: Required
+  section_format: UnifiedDirectiveLayout
+  persona_support: All
+
+chorus:
+  features:
+    - Keyword_Prepare: ["たちあがる", "こえていく", "さけび", "てをのばす"]
+    - Keyword_Burst: ["とびたつ", "もえあがる", "ひかりさく", "うごきだす"]
+    - Keyword_Awaken: ["めざめる", "ひらく", "かくめい", "うまれかわる"]
+
+exclude_engine:
+  use: BaseProfile
+  version: 3.0
+
+notes:
+  recommended_personas:
+    - Hoshizaki Aria
+    - Kurogane Ren
+    - Akatsuki Sakura
+    - Aozaki LEON
