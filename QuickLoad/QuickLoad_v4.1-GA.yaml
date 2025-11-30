@@ -1,0 +1,99 @@
+# DreamArc QuickLoad v4.1-GA
+# External Loader Specification (GitHub Edition)
+# dreamarc-project / DreamArc-Core
+
+version: "4.1-GA"
+status: "Stable"
+last_updated: "2025-11"
+
+QuickLoad:
+  description: >
+    DreamArc OS external boot loader.
+    Loads DASF, SyntaxModules, PersonaRegistry, ExcludeEngine and Runtime Specs
+    directly from GitHub for cross-AI synchronization (ChatGPT / Claude / Gemini).
+
+  structure:
+    - DASF
+    - SyntaxModules
+    - PersonaRegistry
+    - ExcludeEngine
+    - OutputSpec
+    - RuntimeFlags
+
+  source_base_url: "https://raw.githubusercontent.com/dreamarc-project/DreamArc-Core/main"
+
+# ============================================================
+# 1. DASF CORE SPECIFICATION
+# ============================================================
+
+DASF:
+  version: "2.2-PhonemeAssist"
+  path: "DASF/DASF_v2.2-PhonemeAssist.md"
+  load: true
+
+# ============================================================
+# 2. SYNTAX MODULES (DA-OS)
+# ============================================================
+
+SyntaxModules:
+  default: "DA-Nana"
+  modules:
+    - name: "DA-Nana"
+      path: "Modules/DA-Nana.yaml"
+    - name: "DA-YOASOBI"
+      path: "Modules/DA-YOASOBI.yaml"
+    - name: "DA-ARIA"
+      path: "Modules/DA-ARIA.yaml"
+    - name: "DA-KG-LR"
+      path: "Modules/DA-KG-LR.yaml"
+  auto_fallback: true
+
+# ============================================================
+# 3. PERSONA REGISTRY
+# ============================================================
+
+PersonaRegistry:
+  enabled: true
+  personas:
+    - name: "Hoshizaki Aria"
+      id: "ARIA01"
+      path: "PersonaRegistry/HoshizakiAria.json"
+
+    - name: "Kurogane Ren"
+      id: "KGLR01"
+      path: "PersonaRegistry/KuroganeRen.json"
+
+# ============================================================
+# 4. EXCLUDE ENGINE
+# ============================================================
+
+ExcludeEngine:
+  version: "3.0"
+  path: "ExcludeEngine/ExcludeEngine_v3.0.yaml"
+  load: true
+
+# ============================================================
+# 5. OUTPUT SPEC
+# ============================================================
+
+OutputSpec:
+  format: "TripleBlock"
+  outer_header_mode: true
+  directive_layout: "Unified"
+  code_fence: true
+
+# ============================================================
+# 6. RUNTIME FLAGS
+# ============================================================
+
+RuntimeFlags:
+  AutoRebind: true
+  AllowExperimentalTags: true
+  InterFlowDensityAutoAdjust: true
+  EmotionOverflow: "ENABLED"
+  AdaptiveTagUtilization: "ON"
+  DirectiveTolerance: "HIGH"
+
+# ============================================================
+# END OF FILE
+# ============================================================
