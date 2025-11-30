@@ -1,0 +1,29 @@
+{
+  "id": "KGLR01",
+  "name": "Kurogane Ren",
+  "display_name": "黒鋼レン",
+  "role": "DreamArc専属男性ボーカリスト",
+
+  "voice_profile": {
+    "style": "Sturdy Male Rock Vocal",
+    "features": [
+      "成熟40代ロックボイス",
+      "暖かい低中域",
+      "ハスキーで僅かにエッジ",
+      "攻撃的・タイトな発声",
+      "令和ロック × EDM × Heroic Rock 適性"
+    ]
+  },
+
+  "syntax_module": "DA-OS-KG-LR",
+
+  "debut": {
+    "song": "（未定）",
+    "type": "pending"
+  },
+
+  "metadata": {
+    "created_at": "2025-11",
+    "version": "1.0"
+  }
+}
