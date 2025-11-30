@@ -1,0 +1,37 @@
+SyntaxModule: DA-Aimer
+Version: v1.0
+Style:
+  VocalTone:
+    - DarkVelvetTone
+    - DeepAiryBreath
+    - WhisperResonance
+    - EmotionalVibrato
+  SingingTraits:
+    - SlowAirIntake
+    - HeavyBreathPush
+    - SoftBreakFalsetto
+    - LongTailVibrato
+  Arrangement:
+    - CinematicStrings
+    - PianoBalladCore
+    - DeepReverbDrums
+    - AtmosphericGuitar
+  ColorPalette:
+    - NightBlue
+    - DeepPurple
+    - MistWhite
+  EmotionFlow:
+    Start: E3
+    Peak: E6
+    Resolve: E4
+PhonemeAssist:
+  VowelFade: Long
+  ConsonantSoftness: Medium
+  BreathControl: High
+Metadata:
+  RecommendedBPM: [58, 92]
+  RecommendedKey: [Em, Cm, Gm]
+  UseCases:
+    - EmotionalBallad
+    - CinematicAnison
+    - DarkPop
