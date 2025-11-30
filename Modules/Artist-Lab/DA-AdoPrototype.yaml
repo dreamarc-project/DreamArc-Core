@@ -1,0 +1,79 @@
+# DA-AdoPrototype — DreamArc Artist-Lab Prototype Module
+# Style: Ado inspired / 強烈感情・エッジ表現の抽象化
+# Category: Prototype / High-Value / Emotional-Power
+# Version: ArtistLab v1.0
+# Last-Update: 2025-12-01
+
+Meta:
+  Name: "DA-AdoPrototype"
+  Model: "Artist-Lab"
+  ArtistReference: "Ado inspired emotional-edge structure (abstract)"
+  Version: "1.0"
+  Type: "Prototype-Artist-Style"
+  Tags:
+    - EmotionalPower
+    - DarkEdge
+    - HighIntensityVocal
+    - DynamicShift
+
+VocalStyle:
+  Tone: "EdgyDark"
+  Color: "SharpResonant"
+  EmotionCore: "ExplosiveEmotion"
+  RangeFocus: "Mid-High"
+  Vibrato: "Minimal"
+  Attack: "FastSharp"
+  Expression:
+    - "EmotionalScream"
+    - "WhisperBreak"
+    - "SuddenDynamics"
+    - "ContrastSwitch"
+
+Composition:
+  BPM: "120〜168"
+  KeyPreference: ["Em", "F#m", "Dm"]
+  ChordSignature:
+    - "i–VI–III–VII (Dark pop/rock)"
+    - "i–VII–VI–VII"
+    - "i–iv–v (Edge tension)"
+  MelodyProfile:
+    - "WideContrast"
+    - "FastAttackLines"
+    - "EmotionalSustain"
+  Rhythm:
+    - "ModernRock+Electronic"
+    - "SyncopationHeavy"
+    - "TensionBreaks"
+
+LyricsDirectives:
+  Theme:
+    - "葛藤"
+    - "衝動"
+    - "自分との戦い"
+    - "本音"
+  StyleKeywords:
+    - "強い語尾"
+    - "高速テンション転換"
+    - "エッジの効いた表現"
+    - "急激な静⇄動スイッチ"
+  Avoid:
+    - "過度に明るい世界観"
+    - "幸福だけで完結する表現"
+
+SunoCompatibility:
+  VowelControl: "PhonemeAssist-v2.2"
+  ConsonantAttack: "SharpFast"
+  EmotionOverflow: "E4-E7"
+  HighContrastBias: true
+
+PromptTemplate:
+  - "Dark Emotional PopRock (Ado inspired)"
+  - "EdgyVocal, SharpAttack"
+  - "ContrastDynamics + ModernRock"
+  - "BPM:{BPM}, Key:{Key}"
+  - "DreamArc Artist-Lab Prototype Module"
+
+Notes:
+  - "声質の模倣ではなく、Ado系の感情エッジ構造のみ抽象化。"
+  - "DASF v2.2-PhonemeAssist 最適化済み。"
+  - "EmotionOverflow の高反応テスト用途として推奨。"
