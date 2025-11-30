@@ -1,0 +1,75 @@
+# =======================================
+#  DA-Pop.yaml
+#  DreamArc Syntax Module - J-POP汎用構文
+#  Version: 1.0.0
+# =======================================
+
+Meta:
+  module: "DA-Pop"
+  version: "1.0.0"
+  category: "J-POP / General"
+  description: >
+    汎用J-POPの歌詞生成に最適化された構文モジュール。
+    明瞭なワード選択・自然な語尾処理・標準的な感情遷移を扱う。
+    PhonemeAssist v2.2 対応。
+
+CoreRules:
+  tempo_range: "90-130"
+  recommended_keys: ["C", "G", "Am", "Em", "F"]
+  emotion_flow: "E1 → E3 → E5 → E3"
+  phoneme_assist: true
+  japanese_style: "ひらがな優先・語中助詞変換（は→わ／へ→え）"
+
+StructuralDirectives:
+  Intro:
+    default_lines: 2
+    emotion: "calm"
+  Verse:
+    default_lines: 6
+    emotion: "drive"
+  PreChorus:
+    default_lines: 4
+    emotion: "build"
+  Chorus:
+    default_lines: 6
+    emotion: "high"
+  Bridge:
+    default_lines: 4
+    emotion: "tension"
+  Outro:
+    default_lines: 2
+    emotion: "fade"
+
+WordStyle:
+  vocabulary_tone: 
+    - "やさしい"
+    - "透明感"
+    - "シンプル"
+    - "日常風景"
+  avoid_words:
+    - "専門用語"
+    - "極端に古い表現"
+    - "重すぎる比喩"
+
+PhonemeRules:
+  vowel_fade: "medium"
+  consonant_attack: "soft"
+  phrase_connection: "滑らか"
+
+LinePatterns:
+  simple_flow:
+    - "{feeling} を {action}"
+    - "{scene} に {emotion}"
+  emotional_flow:
+    - "{memory} が よみがえる"
+    - "{dream} を えがいて"
+
+Tags:
+  experimental_allowed: true
+  best_fit_personas:
+    - 星野メイ
+    - 綾瀬ミオ
+    - 白咲ひより
+    - 汎用アニソン系
+
+SyntaxEnd: "<SyntaxModule:DA-Pop>"
