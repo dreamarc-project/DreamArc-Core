@@ -1,7 +1,7 @@
 # ==========================
 # DreamArc-Core / SyntaxOS
-# YOASOBI Style Main OS
-# File: DA-OS-YOASOBI.yaml
+# YO Style Main OS
+# File: DA-OS-YO.yaml
 # ==========================
 
 meta:
@@ -81,7 +81,7 @@ rhythm:
   separator_rules:
     enabled: true
     symbol: "・"
-    trigger_condition: "explicit_YOASOBI_style_only"
+    trigger_condition: "explicit_YO_style_only"
     notes:
       - "全モーラ分割は禁止"
       - "語頭とアクセント位置のみ跳ねる"
@@ -181,15 +181,16 @@ instrumentation:
 
 prompt_templates:
   high_level_tags:
-    - "YOASOBIStyle"
+    - "YOStyle"
     - "StoryDrivenJPop"
     - "FastPhrasing"
     - "EmotionalEDM"
-default_prompt_jp: >
+
+  default_prompt_jp: >
     YOスタイルの物語性の強いJ-Pop × EDMポップ。
     速いフレーズと緻密な言葉選びで、日常と非日常が交差する物語を描く。
 
-default_prompt_en: >
+  default_prompt_en: >
     YO-style story-driven J-Pop × EDM pop,
     with fast phrasing and literary wording.
 
@@ -205,6 +206,9 @@ safety:
   nsfw_level: "safe"
 
 notes:
-  - "本ファイルは本番用 SyntaxOS。研究用の DA-LAB-YOASOBI.yaml とペアで運用する。"
+  - "本ファイルは本番用 SyntaxOS。研究用の DA-LAB-YO.yaml とペアで運用する。"
+  - "Separator『・』は YO スタイル指定時のみ有効化される。"
+  - "Suno 等での生成時は BPM:128 / Key:Em を推奨スタート値とする。"
+
   - "Separator『・』は YO スタイル指定時のみ有効化される。"
   - "Suno 等での生成時は BPM:128 / Key:Em を推奨スタート値とする。"
