@@ -1,0 +1,67 @@
+# ==========================
+# DreamArc Artist-Lab
+# Kenshi Yonezu Style (Analysis Module)
+# File: DA-KenshiYonezu.yaml
+# Version: 1.0.0
+# ==========================
+
+meta:
+  id: DA-KenshiYonezu
+  category: artist
+  style: "Kenshi Yonezu-like Alt-Pop × Art-Pop"
+  version: "1.0.0"
+  updated: "2025-12-01"
+
+vocal_profile:
+  tone: "Deep & airy / husky nuance"
+  vibrato: "Very subtle"
+  consonant_attack: "Soft"
+  vowel_tone: "Dark-warm"
+  phrasing:
+    type: "Long phrasing with emotional breaks"
+    breath: "Sparse but dramatic"
+  phoneme_assist:
+    enable: true
+    transform_rules:
+      - jp_ha_to_wa
+      - jp_he_to_e
+      - breath_softening
+      - dark_vowel_shift
+
+expression_rules:
+  emotion_profile: "Internal monologue / abstract melancholy"
+  typical_curve: "E0 → E2 → E4 → E1"
+  rhythm: "Loose syncopation"
+  dynamics: "Minimal to medium"
+
+lyric_rules:
+  layout: "Unified Directive Layout"
+  language: "日本語（漢字多めで詩的）"
+  style: "抽象・比喩・内面世界・静と動"
+  separator_rules:
+    allow: false
+
+instrumentation_suggestion:
+  base:
+    - SoftDrums(DryLoFi)
+    - Bass(WarmSubtle)
+    - Piano(Mellow)
+    - Guitar(CleanChorus)
+    - SynthPad(DarkAir)
+  optional:
+    - NoiseTexture
+    - ReverseFX
+
+examples:
+  chorus_example_1: >
+    こぼれおちたことばが いまもしずかにゆれる
+  verse_example_1: >
+    ひびわれたそらを ながめていたんだ
+
+compatibility:
+  dasf: "v2.2-PhonemeAssist"
+  quickload: "Compatible"
+
+notes:
+  - "Artist-Lab用：抽象詩・内部感情の方向性を解析するための軽量版。"
+  - "本番曲生成では DA-AltArtPop（将来実装予定）と併用を推奨。"
