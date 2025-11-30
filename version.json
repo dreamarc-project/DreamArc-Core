@@ -1,0 +1,37 @@
+{
+  "core_version": "1.0.0",
+  "description": "DreamArc-Core 全体のバージョンおよびコンポーネント依存関係を管理するファイル。AI三人衆（ChatGPT / Claude / Gemini）間での互換性維持を目的とする。",
+  
+  "components": {
+    "dasf": "2.2-PhonemeAssist",
+    "quickload": "4.2-GA",
+    "exclude_engine": "3.0",
+    "persona_registry": "1.0.0",
+    "syntax_modules": {
+      "os_yoasobi": "1.0.0",
+      "os_nana": "1.0.0",
+      "os_kg_lr": "1.0.0"
+    }
+  },
+
+  "compatibility_matrix": {
+    "dasf_2.2": {
+      "compatible_quickload": ["4.0", "4.1", "4.2"],
+      "compatible_exclude_engine": ["3.0"],
+      "compatible_persona_registry": ["1.0.0"]
+    },
+    "quickload_4.2": {
+      "compatible_dasf": ["2.0", "2.1", "2.2"],
+      "compatible_persona_registry": ["1.0.0"],
+      "compatible_exclude_engine": ["3.0"]
+    }
+  },
+
+  "metadata": {
+    "created": "2025-12-01",
+    "updated": "2025-12-01",
+    "author": "DreamArc Team",
+    "maintainers": ["ChatGPT", "Claude", "Gemini"],
+    "notes": "version.json はすべての大型アップデートで更新する。互換性チェックは scripts/check-compatibility.js によって自動化予定。"
+  }
+}
