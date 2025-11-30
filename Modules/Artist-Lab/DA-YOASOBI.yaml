@@ -1,0 +1,71 @@
+# ==========================
+# DreamArc Artist-Lab
+# YOASOBI Style (Analysis Module)
+# File: DA-YOASOBI.yaml
+# Version: 1.0.0
+# ==========================
+
+meta:
+  id: DA-YOASOBI
+  category: artist
+  style: "YOASOBI-like J-Pop Narrative × EDM Pop"
+  version: "1.0.0"
+  updated: "2025-12-01"
+
+vocal_profile:
+  tone: "Neutral bright tone / Clear & light"
+  vibrato: "Minimal"
+  consonant_attack: "Soft-medium"
+  vowel_decay: "Medium-short"
+  hop_rules:
+    model: "B"
+    description: "語頭＆アクセントのみ跳ねる、語中スラー、語尾軽保持"
+  phoneme_assist:
+    enable: true
+    transform_rules:
+      - jp_ha_to_wa
+      - jp_he_to_e
+      - clarity_boost
+      - soft_attack
+
+expression_rules:
+  narrative_focus: true
+  story_emotion: "Progressive rise"
+  typical_curve: "E1 → E3 → E5"
+  syncopation: "Light active"
+  pace: "Fast phrasing"
+
+lyric_rules:
+  layout: "Unified Directive Layout"
+  language: "hiragana中心＋最小限の漢字"
+  style: "物語・比喩・情景描写"
+  separator_rules:
+    allow: true
+    char: "・"
+    usage: "必要時のみリズム補助として"
+
+instrumentation_suggestion:
+  base:
+    - EDMDrums(LightPunch)
+    - SynthPluck(Bright)
+    - Piano(SoftPop)
+    - Bass(Sidechain)
+    - Pad(AirLight)
+  optional:
+    - VocalChop
+    - ArpSynth
+
+examples:
+  chorus_example_1: >
+    きみのこえがよるをこえて とどくひかりのようで
+  verse_example_1: >
+    しずかなまちに ひとつだけのゆめがあった
+
+compatibility:
+  dasf: "v2.2-PhonemeAssist"
+  quickload: "Compatible"
+
+notes:
+  - "Artist-Lab用の軽量解析版。"
+  - "本番生成は DA-YG（DA-YOASOBI Module v4.x）を使用推奨。"
+  - "語感・跳ねの挙動研究に最適。"
