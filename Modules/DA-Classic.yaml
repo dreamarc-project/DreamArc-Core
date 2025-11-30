@@ -1,0 +1,86 @@
+# DA-Classic.yaml
+# DreamArc-Core Syntax Module
+# Category: Orchestra / FilmScore / Epic Classic
+
+module: DA-Classic
+version: v1.0
+type: style-profile
+
+style:
+  energy: variable
+  mood: cinematic_grand
+  tempo_range: [60, 160]
+  scale:
+    - minor
+    - harmonic_minor
+    - dorian
+    - phrygian
+    - lydian
+  atmosphere:
+    - dramatic
+    - majestic
+    - sacred
+    - emotional
+    - solemn
+
+vocal:
+  tone: PureResonant
+  power: dynamic_range_wide
+  vibrato: controlled
+  special_traits:
+    - long_phrase
+    - diaphragm_support
+    - headvoice_strong
+    - operatic_shade(optional)
+
+orchestration:
+  primary:
+    - Strings(Full)
+    - Brass(Heroic)
+    - Woodwinds
+    - Percussion(Timpani)
+    - Choir(Optional)
+  optional:
+    - Harp
+    - Celesta
+    - PianoSoft
+    - Organ
+    - CinematicDrums
+
+lyric_rules:
+  language: japanese_hiragana
+  emotion_curve: rise_peak_fall
+  avoids:
+    - スラング
+    - 過剰な日常語
+    - 軽ポップ調表現
+  allows:
+    - 古典語表現
+    - 壮大な比喩
+    - 叙事詩構文
+
+structure:
+  preferred:
+    - Intro(soft)
+    - Verse1(narrative)
+    - PreChorus(build)
+    - Chorus(grand)
+    - Bridge(orchestral)
+    - FinalChorus(majestic)
+
+flow:
+  features:
+    - long_lines
+    - imagery_dense
+    - scene_based
+    - emotional_build
+
+tags:
+  classic: true
+  orchestra: true
+  cinematic: true
+  epic: true
+
+compatibility:
+  DASF_version: ">=2.2"
+  QuickLoad: v4.1-GA+
