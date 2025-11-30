@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DreamArc Syntax Module Schema",
+  "description": "DreamArc-Core における構文モジュール（DA-OS）の基本構造を定義するスキーマ。各 AI（ChatGPT / Claude / Gemini）間で統一的に扱うための形式仕様。",
+  "type": "object",
+
+  "properties": {
+
+    "module_name": {
+      "type": "string",
+      "description": "構文モジュールの正式名称（例：DA-OS-YOASOBI）"
+    },
+
+    "version": {
+      "type": "string",
+      "description": "モジュールのバージョン番号（例：1.0.0）"
+    },
+
+    "description": {
+      "type": "string",
+      "description": "モジュールの概要説明"
+    },
+
+    "style_tags": {
+      "type": "array",
+      "description": "歌詞生成や Suno 用の主要タグを列挙",
+      "items": { "type": "string" }
+    },
+
+    "rules": {
+      "type": "object",
+      "description": "各構文モジュール固有のルールセット",
+      "properties": {
+
+        "hop_model": {
+          "type": "string",
+          "description": "YOASOBIなどの跳ね処理モデル指定（例：B / D / OFF）"
+        },
+
+        "separator_rules": {
+          "type": "string",
+          "description": "句読点・セパレーターの使用ルール（例：Active / Strict / Minimal / None）"
+        },
+
+        "phoneme_assist": {
+          "type": "boolean",
+          "description": "PhonemeAssist（母音最適化）利用の有無"
+        },
+
+        "vowel_convert": {
+          "type": "boolean",
+          "description": "語中助詞『は』『へ』→『わ』『え』変換を行うか"
+        },
+
+        "output_lang": {
+          "type": "string",
+          "description": "出力する歌詞の言語（例：hiragana / japanese）"
+        }
+      }
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "作成者・更新情報など",
+      "properties": {
+        "author": { "type": "string" },
+        "updated": { "type": "string", "format": "date" },
+        "notes": { "type": "string" }
+      }
+    }
+  },
+
+  "required": [
+    "module_name",
+    "version",
+    "rules"
+  ]
+}
