@@ -1,0 +1,76 @@
+# =======================================
+#  DA-EmoRock.yaml
+#  DreamArc Syntax Module - Emotional Rock
+#  Version: 1.0.0
+# =======================================
+
+Meta:
+  module: "DA-EmoRock"
+  version: "1.0.0"
+  category: "Emotional Rock / J-Rock"
+  description: >
+    感情を爆発させるタイプのエモーショナルなロック歌詞に最適化。
+    叫び・衝動・葛藤・希望などの強い情動表現を扱う構文。
+    黒鋼レン、青崎LEON、熱量系ボーカルとの相性が良い。
+
+CoreRules:
+  tempo_range: "120-180"
+  recommended_keys: ["Em", "Dm", "Bm", "Cm"]
+  emotion_flow: "E2 → E5 → E7 → E4"
+  phoneme_assist: true
+  japanese_style: "ひらがな優先・鋭い語感を保持"
+
+StructuralDirectives:
+  Intro:
+    default_lines: 1
+    emotion: "dark"
+  Verse:
+    default_lines: 6
+    emotion: "drive"
+  PreChorus:
+    default_lines: 4
+    emotion: "strain"
+  Chorus:
+    default_lines: 6
+    emotion: "shout"
+  Bridge:
+    default_lines: 4
+    emotion: "break"
+  Outro:
+    default_lines: 2
+    emotion: "fade"
+
+WordStyle:
+  vocabulary_tone:
+    - "衝動"
+    - "胸の痛み"
+    - "焦燥"
+    - "解放"
+    - "涙・叫び・闇・光"
+  avoid_words:
+    - "コミカル表現"
+    - "意図しないポップ化"
+
+PhonemeRules:
+  vowel_fade: "short"
+  consonant_attack: "strong"
+  phrase_connection: "断続的・切れ味重視"
+
+LinePatterns:
+  emo_lines:
+    - "{feeling} が はちきれそうで"
+    - "{pain} を こえたい"
+    - "{darkness} を つらぬく ひかり"
+  shout_lines:
+    - "{dream} を さけぶ"
+    - "{wish} を つかみとる"
+
+Tags:
+  experimental_allowed: true
+  best_fit_personas:
+    - 黒鋼レン
+    - 青崎LEON
+    - Trick☆Luna
+    - パワーロック系全般
+
+SyntaxEnd: "<SyntaxModule:DA-EmoRock>"
