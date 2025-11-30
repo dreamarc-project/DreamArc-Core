@@ -1,0 +1,5 @@
+# QuickLoad Profile - Universal v1.0
+version: 1.0
+load:
+  - ../core/quickload-core-v4.2.yaml
+  - ../ai-specific/chatgpt-extensions-v1.0.yaml
