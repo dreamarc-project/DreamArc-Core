@@ -128,6 +128,10 @@ AI三人衆間のテスト
 
 ---
 
+# 🌐 English Version
+
+*The English version of the README follows below.*
+
 DreamArc Song Framework (DASF)
 
 🚧 This repository is temporarily public for portfolio and demonstration purposes.
