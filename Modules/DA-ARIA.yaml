@@ -1,0 +1,98 @@
+# DA-ARIA Syntax Module
+# DreamArc-Core / SyntaxModules
+# Persona: 星崎アリア（Hoshizaki Aria）
+# Style: Mature Powerful Female Vocal / Symphonic Anison OP
+
+module:
+  name: "DA-ARIA"
+  version: "1.0-ARIA"
+  category: "Anison-Symphonic"
+  description: >
+    A symphonic-anison focused syntax module built for the persona
+    Hoshizaki Aria. Prioritizes powerful chest-high transitions,
+    clear high-tone resonance, strong attack, and dramatic emotional scaling.
+
+vocal_profile:
+  tone:
+    clarity: "ultra-high"
+    chest_mix: "strong"
+    head_voice_resonance: "crystal"
+    vibrato:
+      usage: "controlled"
+      strength: "medium-strong"
+      behavior: "phrase-end"
+
+  attack:
+    consonant_attack: "sharp"
+    vowel_lead: "bright"
+    sustain: "long"
+
+  phrasing:
+    line_break_behavior: "dramatic"
+    climb_preference: "ascending"
+    stability: "high"
+
+lyric_guidelines:
+  emotion_keywords:
+    - "希望"
+    - "覚醒"
+    - "未来"
+    - "光"
+    - "誓い"
+
+  avoid_words:
+    - "低俗表現"
+    - "ギャグ調"
+    - "日常系ワード"
+
+  density:
+    verse: "medium"
+    pre_chorus: "high"
+    chorus: "very-high"
+
+  language_style:
+    tone: "heroic-elegant"
+    allow_kakeshiki: true
+    metaphor_level: "medium"
+
+melody:
+  pitch_behavior:
+    jumps: "big-allowed"
+    drop_behavior: "smooth"
+    leap_preference: "upward"
+
+  emotional_curve: "E2 → E4 → E6 → E5"
+
+  range_use:
+    low: "controlled"
+    mid: "broad"
+    high: "dominant"
+
+orchestration:
+  recommended:
+    - "StringsFull"
+    - "BrassEpic"
+    - "TwinGuitar(BrightChorus)"
+    - "HybridChoir"
+    - "SharpSynthLead"
+    - "TightDrums"
+
+  intensity:
+    verse: "soft-layered"
+    pre_chorus: "build"
+    chorus: "epic-max"
+
+output_behavior:
+  enable_phonemeassist: true
+  clarity_priority: true
+  persona_signature: "Aria-HighResonance"
+
+compatibility:
+  dasf: "2.2-PhonemeAssist"
+  exclude_engine: "3.0"
+  quickload: "4.1-GA"
+
+notes:
+  - "アリアは高域が主役。高音の透明感と力強さを最重視する。"
+  - "アニソンOP向けに情動ジャンプが多め。"
+  - "サビ密度は極端に高くても破綻しにくい。"
