@@ -1,0 +1,104 @@
+# ================================================================================
+#  DreamArc Syntax Module: DA-Metal
+#  Style: Heavy Metal / Power Metal / Speed Metal
+#  Version: 1.0.0
+#  Category: Metal / HardRock / Aggressive
+# ================================================================================
+
+Meta:
+  name: DA-Metal
+  version: 1.0.0
+  description: >
+    重厚なギターリフ、ハイテンションボーカル、攻撃的リズムを前提とした
+    Metal系構文。黒鋼レンやアニソン×メタルハイブリッドに対応。
+
+VocalStyle:
+  base:
+    - StrongChestVoice
+    - MetalScream(Optional)
+    - PowerBelting
+  nuance:
+    - DistortionEdge
+    - AggressiveAttack
+    - ZeroBreathy
+
+MusicTraits:
+  bpm_range: [160, 210]
+  key_suggestions: ["Em", "Fm", "D#m"]
+  instrumentation:
+    - DistortionGuitar(TripleLayer)
+    - MetalDrums(DoubleKick)
+    - Bass(DriveMetal)
+    - Choir(DarkEpic)
+    - SynthPad(Atmosphere)
+
+LyricPatterns:
+  motifs:
+    - つばさ
+    - かげ
+    - よる
+    - せんそう
+    - みらい
+    - らいめい
+    - ほのお
+    - きずな
+  aggressive_words:
+    - もやせ
+    - つらぬけ
+    - くだけちれ
+    - かきならせ
+    - たちむかえ
+  line_rules:
+    - 短文主体でリズム優先
+    - 強い語尾
+    - 英語フレーズ併用可（Fury / Blaze / Break等）
+
+EmotionOverflow:
+  map:
+    fight: E4→E7→E9
+    dark: E3→E5
+    ignite: E5→E8→E9
+  recommended_curve: AggressiveBurnCurve
+
+PhonemeAssist:
+  consonant_attack: Ultra
+  vowel_sustain: Medium
+  glide_priority: Low
+  metal_shout_mode: Enabled
+
+SectionGuides:
+  Intro:
+    emotion: dark
+    notes: リフ中心・語数少なめ
+
+  Verse:
+    emotion: drive
+    notes: 世界観・怒り・覚悟表現
+
+  PreChorus:
+    emotion: ignite
+    notes: 上昇するフレーズで爆発前の圧
+
+  Chorus:
+    emotion: fight
+    notes: キメ語反復・強アクセント・ハイトーン可
+
+  Bridge:
+    emotion: dark
+    notes: 一瞬落として重厚さを出す
+
+  LastChorus:
+    emotion: ignite
+    notes: 最高潮。叫ぶ。ぶち破る。
+
+PersonaCompatibility:
+  recommended_personas:
+    - 黒鋼レン(Kurogane Ren)
+    - 男性ロック系キャラ全般
+  synergy:
+    - Heroic構文と併用可
+    - EDM-Hybridとも相性あり
+
+# ================================================================================
+# End of DA-Metal.yaml
+# ================================================================================
