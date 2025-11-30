@@ -5,7 +5,7 @@
   "components": {
     "dasf": "2.2-PhonemeAssist",
     "quickload": "4.2-GA",
-    "exclude_engine": "3.0",
+    "exclude_engine": "3.0.0",
     "persona_registry": "1.0.0",
     "syntax_modules": {
       "os_yoasobi": "1.0.0",
@@ -17,13 +17,13 @@
   "compatibility_matrix": {
     "dasf_2.2": {
       "compatible_quickload": ["4.0", "4.1", "4.2"],
-      "compatible_exclude_engine": ["3.0"],
+      "compatible_exclude_engine": ["3.0.0"],
       "compatible_persona_registry": ["1.0.0"]
     },
     "quickload_4.2": {
       "compatible_dasf": ["2.0", "2.1", "2.2"],
       "compatible_persona_registry": ["1.0.0"],
-      "compatible_exclude_engine": ["3.0"]
+      "compatible_exclude_engine": ["3.0.0"]
     }
   },
 
@@ -35,3 +35,4 @@
     "notes": "version.json はすべての大型アップデートで更新する。互換性チェックは scripts/check-compatibility.js によって自動化予定。"
   }
 }
+
