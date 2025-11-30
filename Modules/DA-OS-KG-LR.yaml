@@ -1,0 +1,109 @@
+# ============================================================
+#  DA-OS-KG-LR.yaml  (DreamArc Official Syntax Module)
+#  Mode: Production / DASF v2.2-PhonemeAssist / UnifiedLayout
+# ============================================================
+
+module_name: "DA-OS-KG-LR"
+version: "v4.2"
+description: "黒鋼レン系・影山ヒロノブ系Heroic Rock構文 / Attack-Drive"
+
+# ---------------------------------------
+# Base Lab Module（研究→本番リンク）
+# ---------------------------------------
+base_lab_module: "DA-LAB-KG-LR"
+
+# ---------------------------------------
+# Structure Rules
+# ---------------------------------------
+structure:
+  style: "HeroicRock-SymphoMetal"
+  hopModel: "None"              # ロックは跳ねを抑え、語頭強調で駆動
+  separator_rules: "Inactive"
+  interflow_density: "HIGH"
+  rhythm_dynamics: "ENABLED"    # 速度の揺れ、乱高下を許容
+  momentum_curve: "E3-E6-E8-E5"
+  phoneme_assist: "JP-vowel-open"
+
+# ---------------------------------------
+# Section Templates
+# ---------------------------------------
+sections:
+
+  Intro:
+    default_lines: 2
+    emotion: "rise"
+    pacing: "impact"
+    imagery: "burning, metal, ignition"
+
+  Verse:
+    default_lines: 6
+    emotion: "drive"
+    pacing: "fast"
+    story_mode: "battle-start"
+    tone: "solid"
+
+  PreChorus:
+    default_lines: 4
+    emotion: "build"
+    pacing: "tight"
+    lift: "hero-rise"
+    accent: "strong"
+
+  Chorus:
+    default_lines: 6
+    emotion: "explode"
+    pacing: "anthemic"
+    hook_style: "heroic-core"
+    climax: "high-open"
+
+  Bridge:
+    default_lines: 4
+    emotion: "burn"
+    pacing: "break"
+    color: "epic"
+
+  Interlude:
+    tag_required: true
+    options:
+      - neutral
+      - burning
+      - epic
+
+# ---------------------------------------
+# Word & Phoneme Control
+# ---------------------------------------
+phoneme_control:
+  vowel_fade: "long"           # ロック系 → 開く
+  consonant_attack: "explosive"
+  jp_particle_variation:
+    ha_to_wa: true
+    he_to_e: true
+  emphasis_positions:
+    - "語頭アタック（強）"
+    - "サビ前のブレス感"
+    - "高音突き抜け"
+  avoid:
+    - "柔らかすぎる語感"
+    - "ウィスパー系ニュアンス"
+    - "過度にポップな比喩"
+
+# ---------------------------------------
+# Output Decorations
+# ---------------------------------------
+output:
+  require_syntax_tag: true
+  syntax_tag: "<SyntaxModule:DA-OS-KG-LR>"
+  language: "JP-hiragana"
+  outer_header_mode: true
+
+# ---------------------------------------
+# Safety / Filter
+# ---------------------------------------
+exclude_rules:
+  block_words:
+    - "実在歌手名"
+    - "作品タイトル"
+  tone:
+    no_slang: true
+    no_heavy_metal_terms: false   # HeroicRockなので緩和
+    no_hard_violence: true
