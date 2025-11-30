@@ -38,7 +38,7 @@ DASF v2.2-PhonemeAssist
 QuickLoad v4.2-GA
 ExcludeEngine v3.0
 PersonaRegistry v1.0.0
-SyntaxModules (YOASOBI / Nana / KG-LR)
+SyntaxModules ( Nana / KG-LR)
 version.json（互換性管理）
 
 🤖 AI向けロード順序
@@ -179,7 +179,7 @@ DASF v2.2 – PhonemeAssist
 QuickLoad v4.2-GA
 ExcludeEngine v3.0
 PersonaRegistry v1.0.0
-SyntaxModules (YOASOBI / Nana / KG-LR)
+SyntaxModules ( Nana / KG-LR)
 version.json (compatibility control)
 
 🧩 AI Load Order
