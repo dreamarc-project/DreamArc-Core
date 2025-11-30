@@ -1,0 +1,65 @@
+meta:
+  version: 1.0
+  author: DreamArc-System
+  style: RADWIMPS
+  description: >
+    RADWIMPSの繊細で叙情的なロック、リズム変化、
+    映画スコアのような起伏ある展開を再現する構文。
+
+vocal:
+  tone: "SoftWhisper → EmotionalEdge"
+  technique:
+    - "FalsettoSwitch"
+    - "BreathyWhisper"
+    - "EmotionalShout"
+    - "SmoothLegato"
+  dynamics:
+    verse: "GentleLow"
+    prechorus: "GradualRise"
+    chorus: "WideEmotionalHigh"
+
+instrumentation:
+  guitars: "Clean+Crunch mix / DelayAmbient"
+  bass: "WarmDeepBass"
+  drums: "LooseRockDrums / OccasionalBreakBeat"
+  piano: "EmotionalPiano(SoftTouch)"
+  strings: "CinematicStrings(Optional)"
+  synth: "AirPad / MinimalTexture"
+
+songwriting:
+  tempo: "68–138"
+  key: "G / Em / C / D"
+  structure:
+    - "Verse1"
+    - "PreChorus"
+    - "Chorus"
+    - "Verse2"
+    - "Bridge"
+    - "LastChorus(Long)"
+  notes: >
+    1曲の中で“空気が変わる”転調・展開がよく似合う。
+
+lyric_traits:
+  theme:
+    - "恋と喪失"
+    - "命"
+    - "風景の記憶"
+    - "哲学的な感性"
+  style:
+    - "詩的で会話的"
+    - "比喩と具体描写の混合"
+
+mixing:
+  vocal_fx:
+    - "BreathyComp"
+    - "SmallHallReverb"
+    - "Delay(EchoAmbient)"
+  guitar_pan: "L60/R60"
+  piano_center: true
+  strings_wide: "L80/R80"
+
+compatibility:
+  modules:
+    syntax: "DASF v2.x"
+    phoneme: "PhonemeAssist v2.2"
+    quickload: "QuickLoad v4.x"
