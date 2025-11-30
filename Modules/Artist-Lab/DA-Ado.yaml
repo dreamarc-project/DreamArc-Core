@@ -1,0 +1,82 @@
+# ==========================
+# DreamArc Syntax Module
+# Artist-Lab: Ado Style
+# File: DA-Ado.yaml
+# Version: 1.0.0
+# Status: Active
+# ==========================
+
+meta:
+  id: DA-Ado
+  category: artist
+  style: "Ado-like Dynamic Emo Rock"
+  version: "1.0.0"
+  updated: "2025-12-01"
+
+vocal_profile:
+  tone: "Powerful, dark resonance, sharp consonants"
+  whisper: false
+  vibrato: "Controlled / Short"
+  vowel_decay: "Fast"
+  consonant_attack: "Strong"
+  emotional_range: "High-intensity / Vulnerable mix"
+  note_behavior:
+    high_notes: "Edge-boosted, tension sharp"
+    mid_notes: "Neutral"
+    low_notes: "Soft but stable"
+  phoneme_assist:
+    enable: true
+    transform_rules:
+      - jp_ha_to_wa
+      - jp_he_to_e
+      - stress_t
+      - glottal_edge
+
+expression_rules:
+  dynamics:
+    default: "Strong"
+    accents: "Frequent"
+    breaths: "Intentional breaks allowed"
+  emotional_curves:
+    allowed:
+      - E1
+      - E3
+      - E6
+    typical_flow: "E1 → E6 → E3"
+  phrase_style:
+    pattern: "Short-cut phrases + explosive chorus"
+    allow_breaks: true
+    break_points: "句読点位置・韻ポイント"
+
+lyric_rules:
+  layout: "Unified Directive Layout"
+  language: "ja-hiragana"
+  interlude:
+    allow: true
+    default_emotion: "neutral"
+
+instrumentation_suggestion:
+  base:
+    - DistortionGuitar(SharpAttack)
+    - Drums(PunchySnare)
+    - ElectricBass(Drive)
+    - SynthPad(Dark)
+    - Piano(LightSupport)
+  optional:
+    - ScreamingFX
+    - VocalDoubler
+    - FilterRise
+
+examples:
+  chorus_example_1: >
+    さけびだした こころがこわす かくしたほんとう
+  verse_example_1: >
+    しずかなよるに つめたいゆめがおちてく
+
+compatibility:
+  dasf: "v2.2-PhonemeAssist"
+  quickload: "Compatible"
+
+notes:
+  - "The module aims for emotional explosiveness without voice mimicry."
+  - "Consonant sharpness + emotional spikes define the structure."
