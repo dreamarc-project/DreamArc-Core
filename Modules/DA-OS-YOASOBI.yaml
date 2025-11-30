@@ -1,0 +1,209 @@
+# ==========================
+# DreamArc-Core / SyntaxOS
+# YOASOBI Style Main OS
+# File: DA-OS-YOASOBI.yaml
+# ==========================
+
+meta:
+  id: DA-OS-YOASOBI
+  label: "YOASOBI StoryPop OS"
+  version: "4.1-SCT"
+  role: "SyntaxOS"
+  style_family: "YOASOBI-like J-Pop Narrative × EDM Pop"
+  base_lab_module: "DA-LAB-YOASOBI"
+  created: "2025-12-01"
+  updated: "2025-12-01"
+
+engine_binding:
+  dasf_version: "v2.2-PhonemeAssist"
+  quickload_version: "v4.1-GA"
+  exclude_engine: "v3.0"
+  syntax_module_tag: "<SyntaxModule:DA-YG>"
+  output_spec:
+    layout: "Unified Directive Layout"
+    language: "JP-hiragana-main"
+    code_fence: true
+    triple_block: true   # 🎧 / 🎵 / 🚫
+  flags:
+    enable_phonemeassist: true
+    enable_emotionoverflow: true
+    enable_interflow: true
+
+structure:
+  bpm_default: 128
+  bpm_range: [120, 134]
+  key_default: "Em"
+  key_suggestion: ["Em", "Fm", "Dm"]
+  sections:
+    intro:
+      tag: "Intro"
+      lines: 2
+      emotion: "rise"
+    verse1:
+      tag: "Verse1"
+      lines: 6
+      emotion: "drive"
+    prechorus1:
+      tag: "PreChorus1"
+      lines: 4
+      emotion: "build"
+    chorus1:
+      tag: "Chorus1"
+      lines: 6
+      emotion: "high"
+    verse2:
+      tag: "Verse2"
+      lines: 6
+      emotion: "drive"
+    prechorus2:
+      tag: "PreChorus2"
+      lines: 4
+      emotion: "build"
+    chorus2:
+      tag: "Chorus2"
+      lines: 6
+      emotion: "high"
+    bridge:
+      tag: "Bridge"
+      lines: 4
+      emotion: "twist"
+    last_chorus:
+      tag: "ChorusLast"
+      lines: 8
+      emotion: "climax"
+    outro:
+      tag: "Outro"
+      lines: 2
+      emotion: "release"
+
+rhythm:
+  hop_model: "B"
+  separator_rules:
+    enabled: true
+    symbol: "・"
+    trigger_condition: "explicit_YOASOBI_style_only"
+    notes:
+      - "全モーラ分割は禁止"
+      - "語頭とアクセント位置のみ跳ねる"
+      - "語中はスラー処理"
+      - "語尾は軽く保持する"
+  flow_density: "medium-high"
+  phrase_length: "long-short-mix"
+  syncopation_level: "light-active"
+  swing_bias: "low"
+  articulation: "smooth-tight"
+
+melody:
+  tone_profile:
+    brightness: "high"
+    warmth: "medium"
+    clarity: "very-high"
+  motion:
+    step_motion_ratio: 0.7
+    leap_motion_ratio: 0.3
+    leap_behavior: "emotional_words_only"
+  vibrato:
+    usage: "minimal"
+    position: "phrase_tail"
+  emotional_shape:
+    verse: "calm→curious"
+    pre_chorus: "build→uneasy"
+    chorus: "expansion→release"
+    last_chorus: "overdrive"
+
+vocal:
+  register_focus: "mid-high"
+  power_profile:
+    verse: "soft-medium"
+    pre_chorus: "medium"
+    chorus: "medium-strong"
+  consonant_attack: "soft-medium"
+  vowel_decay: "medium-short"
+  breath_usage: "subtle"
+  phoneme_assist:
+    enabled: true
+    rules:
+      - "jp_ha_to_wa"
+      - "jp_he_to_e"
+      - "long_vowel_smoothing"
+      - "sokuon_control"
+
+lyrics:
+  narrative_focus: true
+  viewpoint:
+    default: "一人称（わたし / ぼく）"
+    shift_allowed: true
+  time_axis:
+    allow_past: true
+    allow_present: true
+    allow_future: true
+    comment: "時間軸を行き来する物語構造を許可"
+  word_choice:
+    tone: "literary-modern"
+    allow_metaphor: true
+    allow_symbolic_imagery: true
+    avoid:
+      - "メタル系スラング"
+      - "過度な絶叫ワード"
+      - "露骨なネットスラング"
+  line_structure:
+    verse_line_length: "medium"
+    chorus_density: "very-high"
+    flow_connectivity: "tight"
+  separator_rules:
+    inherit_from_rhythm: true
+    usage_example: "きみ・ぼく・よる・ひかり"
+
+emotionflow:
+  curve_global: "E1 → E3 → E5 → E4"
+  notes:
+    - "Aメロで静かな違和感や予兆"
+    - "Bメロで感情の高まりと選択の迫り"
+    - "サビで感情の解放と物語の核心提示"
+    - "ラストサビで感情の上書き・再定義"
+
+instrumentation:
+  base:
+    - "Drums(EDM_Pop_Tight)"
+    - "Bass(Sidechain_Deep)"
+    - "Piano(SoftPop)"
+    - "SynthPluck(Bright)"
+    - "Pad(AirLight)"
+  optional:
+    - "ArpSynth(16th)"
+    - "VocalChop(Ambient)"
+    - "Guitar(CleanDelay)"
+  mix_guidelines:
+    vocal_forward: true
+    sidechain_kick_to_bass: true
+    reverb_vocal: "short_plate"
+    stereo_width: "medium-wide"
+
+prompt_templates:
+  high_level_tags:
+    - "YOASOBIStyle"
+    - "StoryDrivenJPop"
+    - "FastPhrasing"
+    - "EmotionalEDM"
+  default_prompt_jp: >
+    YOASOBI風の物語性の強いJ-Pop × EDMポップ。
+    速いフレーズと緻密な言葉選びで、日常と非日常が交差する物語を描く。
+  default_prompt_en: >
+    YOASOBI-like story-driven J-Pop × EDM pop,
+    with fast phrasing and literary wording.
+
+safety:
+  allow_topics:
+    - "日常の感情"
+    - "夢・希望・挫折・再出発"
+    - "ファンタジー・SF的な比喩"
+  avoid_topics:
+    - "過度な暴力・残酷描写"
+    - "差別的・攻撃的表現"
+    - "露骨な性表現"
+  nsfw_level: "safe"
+
+notes:
+  - "本ファイルは本番用 SyntaxOS。研究用の DA-LAB-YOASOBI.yaml とペアで運用する。"
+  - "Separator『・』は YOASOBI 風指定時のみ有効化される。"
+  - "Suno 等での生成時は BPM:128 / Key:Em を推奨スタート値とする。"
