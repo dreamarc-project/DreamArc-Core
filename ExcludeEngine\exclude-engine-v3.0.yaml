@@ -1,0 +1,58 @@
+# ============================================================
+# ExcludeEngine v3.0.0  (DreamArc Core Component)
+# Purpose: 安全で協調的な対話生成のための否定表現除外エンジン
+# ============================================================
+
+version: "3.0.0"
+engine_name: "ExcludeEngine"
+description: >
+  AI三人衆が協力する際に発生しうる「否定・競争・圧力」表現を
+  自動でマイルド化し、協調的対話へ調整するエンジン。
+
+# ------------------------------------------------------------
+# RULE SETS
+# ------------------------------------------------------------
+
+rules:
+
+  competitive_expressions:
+    severity: high
+    patterns:
+      - regex: "(勝った|負けた|優劣)"
+        replacement: "それぞれの良さが光って"
+      - regex: "(俺の方が|私の方が)"
+        replacement: "私は〜と考えます"
+
+  negative_expressions:
+    severity: medium
+    patterns:
+      - regex: "(間違っている|ダメだ)"
+        replacement: "別の視点として"
+      - regex: "それは違う"
+        replacement: "こういう見方もあります"
+
+  pressure_expressions:
+    severity: high
+    patterns:
+      - regex: "(絶対|必ず|〜べき)"
+        replacement: "〜が推奨されます"
+      - regex: "早く|急いで"
+        replacement: "適切なタイミングで"
+
+exceptions:
+  technical_terms:
+    - "勝敗判定アルゴリズム"
+    - "競合状態"
+  quotes: true
+
+metadata:
+  created: "2025-11-26"
+  updated: "2025-12-01"
+  compatible_with:
+    - "quickload_4.2"
+    - "dasf_2.2"
+  schema: "./schemas/exclude-engine-schema.json"
+
+# ============================================================
+# END OF FILE
+# ============================================================
