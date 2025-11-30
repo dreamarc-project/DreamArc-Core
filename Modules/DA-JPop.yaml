@@ -1,0 +1,98 @@
+# ================================================================================
+#  DreamArc Syntax Module: DA-JPop
+#  Style: Mainstream J-POP / Soft Rock / Ballad-Pop
+#  Version: 1.0.0
+# ================================================================================
+
+Meta:
+  name: DA-JPop
+  version: 1.0.0
+  description: >
+    現代J-POP全般に対応する汎用構文。
+    シンプルな言葉・普遍的な感情・滑らかな歌唱ラインを重視。
+
+VocalStyle:
+  base:
+    - SoftClearVocal
+    - SlightAirness
+    - SmoothLegato
+  nuance:
+    - 語尾ほんの少し抜く
+    - サビでは張り上げ可
+    - 優しさ × 情感バランス
+
+MusicTraits:
+  bpm_range: [90, 130]
+  key_suggestions: ["C", "G", "Am", "F"]
+  instrumentation:
+    - Piano
+    - AcousticGuitar
+    - ElectricGuitar(Clean)
+    - Bass(WarmRound)
+    - Drums(SoftPop)
+    - Strings(Optional)
+    - Pad/WarmSynth(Subtle)
+
+LyricPatterns:
+  motifs:
+    - きみ
+    - ぼく
+    - ひかり
+    - ゆめ
+    - こころ
+    - えがお
+    - あい
+    - そら
+  style_rules:
+    - 優しい語彙・ポジティブ・日常と感情
+    - 比喩はやさしめに
+    - サビは前向きな決意
+
+EmotionOverflow:
+  map:
+    gentle: E2→E3→E4
+    hopeful: E3→E5
+    emotional: E3→E4→E6
+
+PhonemeAssist:
+  consonant_attack: Soft
+  vowel_sustain: Medium
+  glide_priority: Medium
+
+SectionGuides:
+  Intro:
+    emotion: calm
+    notes: ピアノ・アコギで雰囲気づくり
+
+  Verse:
+    emotion: mild
+    notes: 日常の描写・素直な気持ち
+
+  PreChorus:
+    emotion: raise
+    notes: 心の高まりを丁寧に
+
+  Chorus:
+    emotion: bright
+    notes: 前向き・感情開放・やわらかいハイトーン
+
+  Bridge:
+    emotion: reflective
+    notes: 一瞬の静けさで感情深化
+
+PersonaCompatibility:
+  recommended_personas:
+    - 白咲ひより
+    - 星崎アリア
+    - 遠藤レナ
+    - 風花ねね
+    - MochoPa
+  synergy:
+    - DA-Ballad
+    - DA-Pop
+    - DA-Rock(Soft)
+    - DA-ARIA
+
+# ================================================================================
+# End of DA-JPop.yaml
+# ================================================================================
