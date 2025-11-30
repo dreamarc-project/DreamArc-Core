@@ -1,0 +1,78 @@
+# DA-KageyamaPrototype — DreamArc Artist-Lab Prototype Module
+# Style: Heroic Anison / 影山ヒロノブ系 熱量抽象化
+# Category: Prototype / High-Value / Heroic-Power
+# Version: ArtistLab v1.0
+# Last-Update: 2025-12-01
+
+Meta:
+  Name: "DA-KageyamaPrototype"
+  Model: "Artist-Lab"
+  ArtistReference: "Hiroshi Kageyama inspired heroic anison energy (abstract)"
+  Version: "1.0"
+  Type: "Prototype-Artist-Style"
+  Tags:
+    - HeroicAnison
+    - HighEnergyVocal
+    - PowerChorus
+    - BraveEmotion
+
+VocalStyle:
+  Tone: "FullPower"
+  Color: "BrightMetallic"
+  EmotionCore: "HeroicShout"
+  RangeFocus: "High"
+  Vibrato: "StrongWide"
+  Attack: "Explosive"
+  Expression:
+    - "VictoryShout"
+    - "StrongResolve"
+    - "CourageBlast"
+
+Composition:
+  BPM: "140〜172"
+  KeyPreference: ["Em", "Am", "Gm"]
+  ChordSignature:
+    - "i–VI–VII (Anison heroic)"
+    - "i–III–VI–VII"
+    - "VI–VII–i"
+  MelodyProfile:
+    - "HighEnergyLines"
+    - "LongSustainPeaks"
+    - "HeroicSteps"
+  Rhythm:
+    - "DoubleKickRock"
+    - "PowerMetalBlend"
+    - "EpicBandSound"
+
+LyricsDirectives:
+  Theme:
+    - "勇気"
+    - "誇り"
+    - "仲間"
+    - "戦う理由"
+  StyleKeywords:
+    - "熱量100%"
+    - "叫ぶような決意"
+    - "短い決め語尾"
+  Avoid:
+    - "悲しみのみで終わる描写"
+    - "囁き系ボーカル"
+    - "過度に繊細な表現"
+
+SunoCompatibility:
+  VowelControl: "PhonemeAssist-v2.2"
+  ConsonantAttack: "Explosive"
+  EmotionOverflow: "E5-E7"
+  HighEnergyBias: true
+
+PromptTemplate:
+  - "Heroic Anison (Kageyama inspired)"
+  - "PowerfulHighTone, ExplosiveAttack"
+  - "EpicRockBand + DoubleKick"
+  - "BPM:{BPM}, Key:{Key}"
+  - "DreamArc Artist-Lab Prototype Module"
+
+Notes:
+  - "影山ヒロノブの声質ではなく、アニソン英雄系の熱量・構造のみ抽象化。"
+  - "黒鋼レン（DA-KG-LR）の基礎研究にも使用可能。"
+  - "DASF v2.2-PhonemeAssistに最適化済み。"
