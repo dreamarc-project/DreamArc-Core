@@ -1,0 +1,57 @@
+module: DA-Ballad
+version: 1.0.0
+status: WIP
+description: >
+  バラード向け構文OS。
+  感情重視・丁寧な発音・余韻・静かな熱さを
+  最大化する歌詞生成エンジン。
+
+style:
+  energy: Low
+  emotion_curve: Deep→Warm→Tear→Hope
+  phonemeassist: v2.2
+  separator_rules: Off
+
+rhythm:
+  bpm_range: [60, 90]
+  feel: Slow
+  syncopation: Minimal
+  accent: SoftGentle
+
+melody:
+  contour: Smooth
+  sustain: Long
+  vibrato: EmotionalSoft
+  leaps: Controlled
+
+lyrics_rules:
+  language: JP
+  script: Hiragana
+  interlude_tag: Required
+  persona_support: All
+  section_format: UnifiedDirectiveLayout
+  theme_examples:
+    - 「たいせつなひと」
+    - 「わすれられないきおく」
+    - 「こえにならないこえ」
+    - 「よりそうぬくもり」
+
+chorus:
+  features:
+    - emotional_words:
+        - 「なみだ」
+        - 「こころ」
+        - 「ぬくもり」
+        - 「やさしさ」
+        - 「あいしてる」
+
+exclude_engine:
+  use: BaseProfile
+  version: 3.0
+
+notes:
+  recommended_personas:
+    - 白咲ひより
+    - 星崎アリア
+    - 綾瀬ミオ
+    - 遠藤レナ
