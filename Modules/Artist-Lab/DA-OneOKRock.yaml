@@ -1,0 +1,81 @@
+# ==========================
+# DreamArc Artist-Lab Module
+# ONE OK ROCK Style
+# File: DA-OneOKRock.yaml
+# Version: 1.0.0
+# ==========================
+
+meta:
+  id: DA-OneOKRock
+  category: artist
+  style: "ONE OK ROCK-like Emotional Rock"
+  version: "1.0.0"
+  updated: "2025-12-01"
+
+vocal_profile:
+  tone: "Emotional High-Tone, bright yet raspy"
+  vibrato: "Medium-Fast"
+  consonant_attack: "Strong"
+  vowel_decay: "Medium"
+  energy_output: "80–140%"
+  note_behavior:
+    high_notes: "Intense belting, slight rasp"
+    mid_notes: "Emotional & stable"
+    low_notes: "Tight and minimal"
+  phoneme_assist:
+    enable: true
+    transform_rules:
+      - jp_ha_to_wa
+      - jp_he_to_e
+      - english_s_slight
+      - k_strong
+      - vowel_sustain
+
+expression_rules:
+  dynamics:
+    default: "Strong"
+    accents: "Off-beat emotional pushes"
+  emotional_curves:
+    allowed:
+      - E3
+      - E5
+      - E7
+    typical_flow: "E3 → E5 → E7"
+  phrase_style:
+    pattern: "Mid-long emotional phrases"
+    allow_breaks: true
+    sustain_behavior: "Strong sustain on peak words"
+
+lyric_rules:
+  layout: "Unified Directive Layout"
+  language: "ja-hiragana + en"
+  interlude:
+    allow: true
+    default_emotion: "high"
+
+instrumentation_suggestion:
+  base:
+    - DistortionGuitar(HeavyCrunch)
+    - DistortionGuitar(HighGainLead)
+    - Bass(DeepDrive)
+    - Drums(EmoRockArena)
+    - Piano(SoftEmotion)
+  optional:
+    - Strings(Drama)
+    - NoiseFX
+    - TrapPerc(OptionalBalladBlend)
+
+examples:
+  chorus_example_1: >
+    きみのなまえを さけびつづけていた I won’t let you go
+  verse_example_1: >
+    かなしみのなかでふるえても えがおをさがしていた
+
+compatibility:
+  dasf: "v2.2-PhonemeAssist"
+  quickload: "Compatible"
+
+notes:
+  - "英語混じりフレーズに最適化。"
+  - "エモーショナルな頂点を作りやすい構成。"
+  - "ロックバラード〜激しい曲まで対応可能。"
