@@ -5,12 +5,12 @@
 # ==========================
 
 meta:
-  id: DA-OS-YOASOBI
-  label: "YOASOBI StoryPop OS"
+  id: DA-OS-YO
+  label: "YO StoryPop OS"
   version: "4.1-SCT"
   role: "SyntaxOS"
-  style_family: "YOASOBI-like J-Pop Narrative × EDM Pop"
-  base_lab_module: "DA-LAB-YOASOBI"
+  style_family: "StoryPop J-Pop Narrative × EDM Pop"
+  base_lab_module: "DA-LAB-YO"
   created: "2025-12-01"
   updated: "2025-12-01"
 
@@ -18,7 +18,7 @@ engine_binding:
   dasf_version: "v2.2-PhonemeAssist"
   quickload_version: "v4.1-GA"
   exclude_engine: "v3.0"
-  syntax_module_tag: "<SyntaxModule:DA-YG>"
+  syntax_module_tag: "<SyntaxModule:DA-YO>"
   output_spec:
     layout: "Unified Directive Layout"
     language: "JP-hiragana-main"
@@ -185,11 +185,12 @@ prompt_templates:
     - "StoryDrivenJPop"
     - "FastPhrasing"
     - "EmotionalEDM"
-  default_prompt_jp: >
-    YOASOBI風の物語性の強いJ-Pop × EDMポップ。
+default_prompt_jp: >
+    YOスタイルの物語性の強いJ-Pop × EDMポップ。
     速いフレーズと緻密な言葉選びで、日常と非日常が交差する物語を描く。
-  default_prompt_en: >
-    YOASOBI-like story-driven J-Pop × EDM pop,
+
+default_prompt_en: >
+    YO-style story-driven J-Pop × EDM pop,
     with fast phrasing and literary wording.
 
 safety:
@@ -205,5 +206,5 @@ safety:
 
 notes:
   - "本ファイルは本番用 SyntaxOS。研究用の DA-LAB-YOASOBI.yaml とペアで運用する。"
-  - "Separator『・』は YOASOBI 風指定時のみ有効化される。"
+  - "Separator『・』は YO スタイル指定時のみ有効化される。"
   - "Suno 等での生成時は BPM:128 / Key:Em を推奨スタート値とする。"
