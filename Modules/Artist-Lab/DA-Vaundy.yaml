@@ -1,0 +1,37 @@
+SyntaxModule: DA-Vaundy
+Version: v1.0
+Style:
+  VocalTone:
+    - WarmLowMid
+    - SoftAirFlow
+    - RelaxedChestMix
+    - SmokyFalsettoBlend
+  SingingTraits:
+    - LooseGroove
+    - LaidBackTiming
+    - SoftSlideUp
+    - GentleConsonant
+  Arrangement:
+    - IndiePopGuitar
+    - LoFiBeat
+    - SoftBassSub
+    - DreamyPadSynth
+  ColorPalette:
+    - PaleBlue
+    - SunsetOrange
+    - SoftBeige
+  EmotionFlow:
+    Start: E2
+    Peak: E4
+    Resolve: E3
+PhonemeAssist:
+  VowelFade: Soft
+  ConsonantSoftness: High
+  BreathControl: Loose
+Metadata:
+  RecommendedBPM: [88, 118]
+  RecommendedKey: [A, F#m, D]
+  UseCases:
+    - AltPop
+    - ChillPop
+    - LoFiVocal
