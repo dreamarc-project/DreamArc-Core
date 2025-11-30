@@ -1,0 +1,72 @@
+meta:
+  version: 1.0
+  author: DreamArc-System
+  style: BumpOfChicken
+  description: >
+    BUMP OF CHICKEN の “物語性”“星・宇宙・時間”を想起させる比喩、
+    柔らかい語りとエモーショナルなバンドサウンドを再現する構文。
+
+vocal:
+  tone: "SoftStory → EmotionalHigh"
+  technique:
+    - "GentleBreathy"
+    - "MidRangeFocus"
+    - "SoftFalsetto"
+    - "SlightNasalColor"
+  dynamics:
+    verse: "CalmLow"
+    chorus: "EmotionalBurst"
+    bridge: "HighFalsettoLift"
+
+lyric_traits:
+  theme:
+    - "星"
+    - "時間"
+    - "孤独と救い"
+    - "旅路"
+    - "少年性"
+  style:
+    - "一人称中心"
+    - "語りかける文体"
+    - "具体 × 抽象を往復する比喩"
+    - "長めの行でも可"
+
+instrumentation:
+  guitars:
+    - "CleanArpeggio"
+    - "LightCrunch"
+    - "EmotionalDistortion(Chorus)"
+  bass: "WarmPickBass"
+  drums: "SoftRockDrums / NaturalRoomFeel"
+  synth:
+    - "SoftPad"
+    - "PianoLayer"
+  special:
+    - "BellSynth(星イメージ)"
+
+arrangement:
+  tempo: "90–150"
+  key: "E / B / C# / A / F#"
+  structure:
+    - "Verse1"
+    - "Verse2"
+    - "PreChorus"
+    - "Chorus"
+    - "Bridge(Optional)"
+    - "LastChorus(Uplift)"
+  notes: >
+    全体的に“語り→叫び”のドラマ曲線を作る。
+
+mixing:
+  vocal_fx:
+    - "LightDelay(1/8 dotted)"
+    - "SmallHallReverb"
+  guitar_pan: "L40/R40"
+  bass_center: true
+  drums_room: "NaturalWide"
+
+compatibility:
+  modules:
+    syntax: "DASF v2.x"
+    phoneme: "PhonemeAssist v2.2"
+    quickload: "QuickLoad v4.x"
