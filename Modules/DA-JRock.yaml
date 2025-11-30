@@ -1,0 +1,92 @@
+# ================================================================================
+#  DreamArc Syntax Module: DA-JRock
+#  Style: Japanese Rock / Alternative / Emo Rock
+#  Version: 1.0.0
+# ================================================================================
+
+Meta:
+  name: DA-JRock
+  version: 1.0.0
+  description: >
+    邦ロック系全般を扱う汎用ロック構文。
+    ミドルテンポ〜ハイテンポ、透明感×疾走感の歌詞生成に最適。
+
+VocalStyle:
+  base:
+    - ClearYouthfulVoice
+    - LightEdge
+    - EmotionalStraightTone
+  nuance:
+    - 少し語尾抜き
+    - 爆発するサビ
+    - 軽いしゃくり可
+
+MusicTraits:
+  bpm_range: [120, 168]
+  key_suggestions: ["A", "Bm", "G", "Em"]
+  instrumentation:
+    - CleanGuitar + OverDriveGuitar
+    - Bass(SoftDrive)
+    - Drums(SnappyRock)
+    - Pad(Atmospheric)
+    - Synth(FillOptional)
+
+LyricPatterns:
+  motifs:
+    - きみ
+    - あの日
+    - ほし
+    - かぜ
+    - こえ
+    - なみだ
+    - こころ
+    - よる
+  style_rules:
+    - 青春感・エモさ・内面
+    - 語彙はひらがな中心で柔らかく
+    - サビは比喩多め
+
+EmotionOverflow:
+  map:
+    youth: E3→E5→E7
+    emo: E4→E6
+    resolve: E5→E7→E8
+
+PhonemeAssist:
+  consonant_attack: Light
+  vowel_sustain: MediumLong
+  glide_priority: High
+
+SectionGuides:
+  Intro:
+    emotion: soft
+    notes: 静かな入り
+
+  Verse:
+    emotion: emo
+    notes: 回想・絆・青春の影
+
+  PreChorus:
+    emotion: lift
+    notes: 内圧高まる表現
+
+  Chorus:
+    emotion: burst
+    notes: 青春爆発・ハイトーン可・比喩
+
+  Bridge:
+    emotion: deep
+    notes: 一瞬トーンを落として余韻増幅
+
+PersonaCompatibility:
+  recommended_personas:
+    - 青崎LEON
+    - 結城 敦士
+    - 若い男性 or 中性的な声のペルソナ全般
+  synergy:
+    - DA-EmoRock
+    - DA-PopRock
+
+# ================================================================================
+# End of DA-JRock.yaml
+# ================================================================================
