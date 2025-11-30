@@ -1,0 +1,106 @@
+# DA-KG-LR Syntax Module
+# Persona: 黒鋼レン（Kurogane Ren）
+# Style: Mature 40s Rock Voice / Heroic Rock × EDM
+# Engine Profile: DA-KG-LR (MatureAttack)
+
+module:
+  name: "DA-KG-LR"
+  version: "1.0-LR"
+  category: "Heroic-Rock"
+  description: >
+    A heavy, masculine, aggressive-but-controlled rock syntax module
+    designed for Kurogane Ren. Focuses on low-mid power, husky edge,
+    tight rhythmic attack, and heroic emotional tone.
+
+vocal_profile:
+  tone:
+    warmth: "deep"
+    grit: "husky-edge"
+    resonance: "low-mid dominant"
+    clarity: "medium-high"
+  
+  power:
+    chest_voice: "very-strong"
+    belt_intensity: "aggressive"
+    drive_amount: "medium"
+    head_mix: "restricted"
+
+  attack:
+    consonant_attack: "explosive"
+    vowel_weight: "heavy"
+    breathiness: "minimal"
+
+  phrasing:
+    line_shape: "punch → hold → release"
+    sync_with_drums: true
+    articulation: "tight"
+
+lyric_guidelines:
+  tone: "masculine-heroic"
+  themes:
+    allow:
+      - "闘志"
+      - "覚悟"
+      - "守る"
+      - "革命"
+      - "誓い"
+      - "逆境突破"
+    avoid:
+      - "中性的イメージ"
+      - "アイドル系表現"
+      - "ファンシー系ワード"
+
+  density:
+    verse: "medium"
+    pre_chorus: "high"
+    chorus: "ultra-high"
+
+  wording_style: "硬派・直線的"
+  metaphor_level: "low"
+
+rhythm:
+  groove: "tight-rock"
+  syncopation: "allowed"
+  edm_fusion: true
+  bpm_preference: [142, 150, 158]
+
+melody:
+  pitch_behavior:
+    jumps: "moderate"
+    slide: "minimal"
+    expression: "attack-based"
+
+  emotional_curve: "E2 → E5 → E7 → E4"
+  range_use:
+    low: "dominant"
+    mid: "strong"
+    high: "accent-only"
+
+orchestration:
+  recommended:
+    - "DistortionGuitar(TightAttack)"
+    - "DeepRoundDriveBass"
+    - "EDM-SynthLayer"
+    - "HybridStringsAttack"
+    - "PunchyDrums(MetalKick)"
+    - "BrightChorusGuitar"
+
+  intensity:
+    verse: "tense"
+    pre_chorus: "rising"
+    chorus: "explosive"
+
+output_behavior:
+  clarity_priority: true
+  enable_phonemeassist: true
+  persona_signature: "KG-LR-HeroicDrive"
+
+compatibility:
+  dasf: "2.2-PhonemeAssist"
+  quickload: "4.1-GA"
+  exclude_engine: "3.0"
+
+notes:
+  - "黒鋼レンは低中域の厚みと咬みしめる歌唱が武器。"
+  - "Heroic Rock × EDM のハイブリッドを想定。"
+  - "サビは攻撃的で密度が極端に高くても成立する。"
