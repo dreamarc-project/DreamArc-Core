@@ -1,0 +1,80 @@
+# DA-Supercell — DreamArc Artist-Lab Module
+# Style: supercell（ryo-style）抽象化構文
+# Category: 主力アーティスト構文
+# Version: ArtistLab v1.0
+# Last-Update: 2025-12-01
+
+Meta:
+  Name: "DA-Supercell"
+  Model: "Artist-Lab"
+  ArtistReference: "supercell inspired composition & ryo-style lyrical flow"
+  Version: "1.0"
+  Type: "Core-Artist-Style"
+  Tags:
+    - JP-Pop
+    - AnimePop
+    - EmotionalCinematic
+    - StoryDriven
+    - PianoDriven
+    - DreamArc-Core-Compatible
+
+VocalStyle:
+  Tone: "ClearBright"
+  Color: "EmotionalEdge"
+  EmotionCore: "StrongYouthfulEmotion"
+  RangeFocus: "HighMid〜High"
+  Vibrato: "ControlledStrong"
+  Attack: "Sharp"
+  Expression:
+    - "HighEnergyBelting"
+    - "FastLyricDelivery"
+    - "EmotionalClarity"
+
+Composition:
+  BPM: "120〜175"
+  KeyPreference: ["Gm", "Em", "Bm", "Dm"]
+  ChordSignature:
+    - "i–VI–III–VII"
+    - "VI–III–VII–i"
+    - "iv–i–III–VII"
+  MelodyProfile:
+    - "FastMelodicRuns"
+    - "StrongHighNotes"
+    - "UpwardResolveCadence"
+  Rhythm:
+    - "Uptempo"
+    - "AnimeDrums"
+    - "PianoArpLead"
+
+LyricsDirectives:
+  Theme:
+    - "疾走感"
+    - "青春的葛藤"
+    - "願い・希望・誓い"
+    - "内面の熱量"
+  StyleKeywords:
+    - "直線的な情熱"
+    - "比喩は控えめ"
+    - "アニメ主題歌の構成力"
+    - "強い決意のワード"
+  Avoid:
+    - "極端な抽象表現"
+    - "低テンションの語彙"
+    - "ウィスパー主体の歌詞"
+
+SunoCompatibility:
+  VowelControl: "PhonemeAssist-v2.2"
+  ConsonantAttack: "Strong"
+  EmotionOverflow: "E3-E6"
+  HighEnergyBias: true
+
+PromptTemplate:
+  - "supercell inspired Anime-Pop"
+  - "FastPianoArp, EmotionalBelting, HighEnergy"
+  - "YouthfulDetermination, HighClarityVocal"
+  - "BPM:{BPM}, Key:{Key}"
+  - "DreamArc Artist-Lab Module"
+
+Notes:
+  - "特定人物の模倣ではなく、アニメポップ系のスタイルを抽象化した構文。"
+  - "DASF v2.2-PhonemeAssist 完全対応。"
