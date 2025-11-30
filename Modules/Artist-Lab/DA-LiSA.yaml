@@ -1,0 +1,37 @@
+SyntaxModule: DA-LiSA
+Version: v1.0
+Style:
+  VocalTone:
+    - BrightPowerEdge
+    - SharpAttackBelt
+    - MetallicResonance
+    - WildVibrato
+  SingingTraits:
+    - StrongOnset
+    - RapidPhrasePush
+    - RockShoutAccent
+    - ControlledGrowlEdge
+  Arrangement:
+    - TwinRockGuitar
+    - FastDrums
+    - HeavyBassDrive
+    - AnisonLeadSynth
+  ColorPalette:
+    - ScarletRed
+    - BurningOrange
+    - JetBlack
+  EmotionFlow:
+    Start: E4
+    Peak: E7
+    Resolve: E5
+PhonemeAssist:
+  VowelFade: Short
+  ConsonantAttack: Strong
+  SyllableTightness: High
+Metadata:
+  RecommendedBPM: [148, 180]
+  RecommendedKey: [Em, F#m, Am]
+  UseCases:
+    - BattleAnison
+    - HighEnergyRock
+    - ShoutVocalChorus
