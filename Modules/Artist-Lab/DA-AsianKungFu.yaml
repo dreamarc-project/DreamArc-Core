@@ -1,0 +1,73 @@
+# DA-AsianKungFu.yaml
+# DreamArc Artist-Lab Module
+# Asian Kung-Fu Generation（アジカン）系アニソン／ロック構文
+
+meta:
+  version: 1.0
+  author: DreamArc-System
+  style: AsianKungFuGeneration
+  description: >
+    アジカン特有のエモーショナルかつ疾走感あるギターロック構文。
+    中域のザラつき、直線的メロディ、文学系詞世界、4つ打ち寄りのタイトなビートを再現。
+
+vocal:
+  tone: "MidHighEdge, EmotionalTight, SlightHusky"
+  technique:
+    - "StraightMelody"
+    - "MinimalVibrato"
+    - "SharpConsonant"
+    - "LightGrowl(Optional)"
+  dynamics:
+    verse: "CalmMid"
+    prechorus: "BuildEdge"
+    chorus: "HighDrive"
+
+instrumentation:
+  guitars: "TwinGuitar(BrightCrunch)+ChorusDelay"
+  bass: "TightPickBass"
+  drums: "RockDrums(TightSnare+FastHiHat)"
+  fx: "MinimalAmbient"
+  synth: "LowPresence"
+
+songwriting:
+  tempo: "148–170"
+  key: "Am / Em / Dm（Minor中心）"
+  structure:
+    - "Intro"
+    - "Verse1"
+    - "PreChorus"
+    - "Chorus"
+    - "Verse2"
+    - "PreChorus2"
+    - "Chorus2"
+    - "Bridge(Optional)"
+    - "LastChorus"
+
+lyric_traits:
+  theme:
+    - "青春"
+    - "葛藤"
+    - "孤独"
+    - "哲学／内省"
+    - "風景描写"
+  style:
+    - "比喩多め"
+    - "詩的だけど直接的"
+    - "抽象 × 具体のミックス"
+  notes: >
+    行単位で文学的な“余白”を残すことを推奨。
+
+mixing:
+  guitar_pan: "L70 / R70"
+  bass_center: true
+  kick_snare_center: true
+  vocal_processing:
+    - "SlightSaturation"
+    - "TightCompression"
+    - "SmallRoomReverb"
+
+compatibility:
+  modules:
+    syntax: "DASF v2.x"
+    phoneme: "PhonemeAssist v2.2"
+    quickload: "QuickLoad v4.x"
