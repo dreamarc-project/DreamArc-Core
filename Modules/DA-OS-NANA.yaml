@@ -1,0 +1,104 @@
+# ============================================================
+#  DA-OS-NANA.yaml  (DreamArc Official Syntax Module)
+#  Mode: Production / DASF v2.2-PhonemeAssist / UnifiedLayout
+# ============================================================
+
+module_name: "DA-OS-NANA"
+version: "v4.2"
+description: "水樹奈々系アニソンOP構文 / Powerful & Symphonic Rock"
+
+# ---------------------------------------
+# Base Lab Module（研究→本番リンク）
+# ---------------------------------------
+base_lab_module: "DA-LAB-Nana"
+
+# ---------------------------------------
+# Structure Rules
+# ---------------------------------------
+structure:
+  style: "SymphonicRock-AnisonOP"
+  hopModel: "None"          # 奈々系は跳ね弱め、語頭のみ自然に強調
+  separator_rules: "Inactive"
+  interflow_density: "HIGH"
+  momentum_curve: "E2-E5-E7-E4"
+  phoneme_assist: "JP-vowel-precision"
+
+# ---------------------------------------
+# Section Templates
+# ---------------------------------------
+sections:
+
+  Intro:
+    default_lines: 2
+    emotion: "rise"
+    pacing: "anthemic"
+    imagery: "light, resolve, awakening"
+
+  Verse:
+    default_lines: 6
+    emotion: "drive"
+    pacing: "fast"
+    story_mode: "battle-start"
+
+  PreChorus:
+    default_lines: 4
+    emotion: "build"
+    pacing: "tight"
+    lift: "high-boost"
+
+  Chorus:
+    default_lines: 6
+    emotion: "high"
+    pacing: "explosion"
+    hook_style: "heroic-melody"
+
+  Bridge:
+    default_lines: 4
+    emotion: "soar"
+    pacing: "open"
+    color: "dramatic"
+
+  Interlude:
+    tag_required: true
+    options:
+      - neutral
+      - heroic
+      - dramatic
+
+# ---------------------------------------
+# Word & Phoneme Control
+# ---------------------------------------
+phoneme_control:
+  vowel_fade: "short"
+  consonant_attack: "strong"
+  jp_particle_variation:
+    ha_to_wa: true
+    he_to_e: true
+  emphasis_positions:
+    - "語頭アタック"
+    - "サビ語尾のロングトーン"
+  avoid:
+    - "過度な跳ね"
+    - "語尾の弱すぎる処理"
+    - "柔らかい語感"
+
+# ---------------------------------------
+# Output Decorations
+# ---------------------------------------
+output:
+  require_syntax_tag: true
+  syntax_tag: "<SyntaxModule:DA-OS-NANA>"
+  language: "JP-hiragana"
+  outer_header_mode: true
+
+# ---------------------------------------
+# Safety / Filter
+# ---------------------------------------
+exclude_rules:
+  block_words:
+    - "実在歌手名"
+    - "作品タイトル"
+  tone:
+    no_slang: true
+    no_heavy_metal_terms: false   # シンフォロックなので緩和
+    no_hard_violence: true
