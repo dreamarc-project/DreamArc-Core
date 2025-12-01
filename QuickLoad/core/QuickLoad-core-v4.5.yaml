@@ -77,8 +77,9 @@ layers:
   # ------------------------------------------------------------
   syntax_module_attach:
     enabled: true
-    attach_position: "lyrics_tail"
+    attach_position: "newline_tail"
     export_meta_to_prompt: false
+    newline_before_tag: true     # ★改行を必ず入れるオプション
     # SyntaxModule 本体は QuickLoad-v4.5-GA 側で読み込み指定
     input: "LyricsCore"
     output: "LyricsFinal"
