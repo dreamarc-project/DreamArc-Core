@@ -1,16 +1,15 @@
 {
   "system_version": "5.2.0",
   "modules": {
-    "DASF": "5.2",
     "EmotionOverflow": "5.2",
     "ColorFlow": "5.2",
     "ColorStory": "5.2",
     "SyntaxOS": "5.2",
+    "PromptLayer": "2.0",
+    "DASF": "5.2",
     "ExcludeEngine": "5.2",
     "IncludeEngine": "5.2",
-    "PromptLayer": "2.0",
     "QuickLoad": "5.2",
-    "PersonaRegistry": "5.2",
-    "Validators": "5.2"
+    "PersonaRegistry": "5.2"
   }
 }
