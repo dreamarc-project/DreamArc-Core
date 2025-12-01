@@ -1,13 +1,20 @@
-Copyright (c) 2025 Kazuto Oyama
-
+Copyright (c) 2025 Kazuto Oyama  
 All rights reserved.
 
-This software and all associated documentation files are  
-proprietary and confidential.
+This software and all associated documentation files are
+proprietary and confidential to the copyright holder.
 
-Unauthorized copying, modification, redistribution, or  
-use of any part of this software is strictly prohibited  
+Source code, YAML specifications, personas, prompts, and all
+framework modules included in this repository are provided
+for viewing and reference purposes only.
+
+No part of this repository may be used, copied, modified,
+merged, published, redistributed, or sublicensed in any form
 without explicit written permission from the copyright holder.
 
-For licensing inquiries, please contact:
+Commercial use, derivative publication, AI model training,
+or integration into any third-party products or services
+is strictly prohibited.
+
+For licensing or partnership inquiries, please contact:
 k-oyama@dreamarc-studio.jp
