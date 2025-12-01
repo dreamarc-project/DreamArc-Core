@@ -1,6 +1,6 @@
 # ============================================================
 # SyntaxModule: DA-OS-YO v4.5
-# Style: YOASOBI系（軽跳ね・透明感・流麗メロディ重視）
+# Style: YOASOBI系 Light Emotional Pop
 # ============================================================
 
 module:
@@ -8,24 +8,26 @@ module:
   export_meta_to_prompt: false
 
   attach:
-    position: "lyrics_tail"
+    position: "newline_tail"
+    newline_before_tag: true
     tag: "<SyntaxModule:DA-OS-YO>"
 
   phoneme:
-    hop_model: "B"          # YOASOBI風 語頭ジャンプ＋語尾スラー
-    separator: "NONE"       # YOASOBI風指定時以外「・」禁止
+    hop_model: "B"
+    separator_rules: "Active"
     vowel_smooth: true
-    consonant_soft: true
+    breath_mix: "Low"
 
   dynamics:
+    intensity: "MediumHigh"
+    brightness: "ClearLight"
     flow: "Smooth"
-    accent_curve: "SoftDrive"
-    line_density: "Medium"
 
   emotion:
-    base: "LightEmotional"
-    curve: "E1→E3→E5"
+    base: "Tender"
+    curve: "E2→E4→E3"
 
   phrasing:
-    allow_phrase_extensions: true
-    suppress_redundant_particles: true
+    gentle_edge: true
+    smooth_linking: true
+
