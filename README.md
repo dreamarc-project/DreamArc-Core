@@ -54,7 +54,7 @@ ChatGPT × Claude × Gemini の三AI監査を通過した
 ---
 
 # 📦 Directory Structure (v5.2)
-'''
+```text
 DreamArc-Core/
 │
 ├── core-modules/
@@ -80,7 +80,7 @@ DreamArc-Core/
 ├── docs/
 ├── utils/
 └── tests/
-'''
+```
 
 ---
 
