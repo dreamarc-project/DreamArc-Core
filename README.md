@@ -54,7 +54,7 @@ ChatGPT × Claude × Gemini の三AI監査を通過した
 ---
 
 # 📦 Directory Structure (v5.2)
-
+'''
 DreamArc-Core/
 │
 ├── core-modules/
@@ -80,9 +80,7 @@ DreamArc-Core/
 ├── docs/
 ├── utils/
 └── tests/
-
-yaml
-コードをコピーする
+'''
 
 ---
 
@@ -93,9 +91,6 @@ yaml
 DreamArc QuickLoad
 Version: v5.2
 Mode: Production
-
-shell
-コードをコピーする
 
 ### 2. Generate Music
 
@@ -109,9 +104,6 @@ SyntaxModule:DA-OS-YO-v5.2
 
 🚫
 NoMetalCore,NoGore
-
-yaml
-コードをコピーする
 
 ---
 
