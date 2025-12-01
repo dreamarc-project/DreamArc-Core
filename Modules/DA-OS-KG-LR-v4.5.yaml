@@ -1,0 +1,32 @@
+# ============================================================
+# SyntaxModule: DA-OS-KG-LR v4.5
+# Style: 影山ヒロノブ系 Mature Rock（黒鋼レン向け）
+# ============================================================
+
+module:
+  id: "DA-OS-KG-LR-v4.5"
+  export_meta_to_prompt: false
+
+  attach:
+    position: "lyrics_tail"
+    tag: "<SyntaxModule:DA-OS-KG-LR>"
+
+  phoneme:
+    attack_model: "MatureAttack"
+    consonant_edge: "HuskySharp"
+    vowel_weight: "Heavy"
+    breath_mix: "Low"
+
+  dynamics:
+    rhythm_dynamics: "ON"
+    drive: "DeepRock"
+    intensity: "High"
+    midrange_focus: "WarmPunch"
+
+  emotion:
+    base: "Resolve"
+    curve: "E1→E4→E6"
+
+  phrasing:
+    tighten_phrase_edges: true
+    maintain_attack_pressure: true
