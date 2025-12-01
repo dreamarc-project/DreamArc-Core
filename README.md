@@ -211,14 +211,15 @@ QuickLoad: 5.2
 
 ## 📜 License
 
-DreamArc-Core is distributed under the
-**DreamArc Proprietary License v1.1**  
-(Closed-Source / No Redistribution / No Commercial Use).
+DreamArc-Core is released under the
+**DreamArc Proprietary License v1.1**.
 
-Source code is provided ONLY for viewing and reference.
-All other rights are reserved by the copyright holder.
+Source code and all modules are provided
+for viewing and reference only.
 
-See the LICENSE file for details.
+No reproduction, redistribution, or commercial use is permitted.
+For details, see the LICENSE file.
+
 ### Future Plans
 
 The licensing terms may be updated in the future 
