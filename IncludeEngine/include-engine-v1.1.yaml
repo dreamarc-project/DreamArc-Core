@@ -1,0 +1,54 @@
+# ============================================================
+# DreamArc-Core / IncludeEngine
+# Positive Inclusion Rules
+# File: include-engine-v1.1.yaml
+# Version: 1.1.0
+# ============================================================
+
+meta:
+  id: "IncludeEngine"
+  version: "1.1.0"
+  description: "楽曲スタイルに応じて『積極的に含める要素』を定義するインクルードエンジン。"
+  created: "2025-12-01"
+  updated: "2025-12-01"
+
+rules:
+  jpop_light:
+    description: "ライトな J-Pop / StoryPop 用の基本構成。"
+    include_tags:
+      - "pop_drum_kit_tight"
+      - "electric_piano_or_synth"
+      - "clean_guitar_optional"
+      - "soft_pad_background"
+
+  edm_pop:
+    description: "EDM × Pop 構成。"
+    include_tags:
+      - "edm_kick"
+      - "sidechain_synth"
+      - "sub_bass"
+      - "bright_lead_synth"
+
+  rock_heroic:
+    description: "アニソン系ヒロイックロック構成。"
+    include_tags:
+      - "rock_drum_kit"
+      - "distortion_guitar_main"
+      - "support_strings_or_brass"
+
+  ballad_emotional:
+    description: "エモーショナルなバラード構成。"
+    include_tags:
+      - "soft_piano"
+      - "warm_strings"
+      - "subtle_percussion"
+
+conflict_handling:
+  description: "IncludeEngine と ExcludeEngine のタグが衝突した場合の扱い。"
+  priority: "include_first"      # include_first / exclude_first
+  log_conflicts: true
+  action_on_conflict: "warn"     # warn / error / auto_resolve
+
+# ============================================================
+# END OF FILE
+# ============================================================
