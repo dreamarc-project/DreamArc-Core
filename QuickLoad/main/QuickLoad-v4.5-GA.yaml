@@ -13,30 +13,21 @@ quickload:
 
 load_order:
 
-  # ------------------------------
-  # 1. Core Engine (必須)
-  # ------------------------------
+  # 1. Core
   - "QuickLoad/core/QuickLoad-core-v4.5.yaml"
 
-  # ------------------------------
-  # 2. SyntaxModules v4.5
-  #    ※構文OSは Prompt と分離し Lyrics のみ修飾
-  # ------------------------------
-  - "Modules/DA-YO-v4.5.yaml"
-  - "Modules/DA-NANA-v4.5.yaml"
-  - "Modules/DA-KG-LR-v4.5.yaml"
+  # 2. SyntaxModules v4.5（DA-OS-* 命名に統一）
+  - "Modules/DA-OS-YO-v4.5.yaml"
+  - "Modules/DA-OS-NA-v4.5.yaml"
+  - "Modules/DA-OS-KG-LR-v4.5.yaml"
 
-  # ------------------------------
-  # 3. Engines (Exclude / Include)
-  # ------------------------------
+  # 3. Engines
   - "ExcludeEngine/exclude-engine-v3.0.yaml"
   - "IncludeEngine/include-engine-v2.0.yaml"
 
-  # ------------------------------
-  # 4. Regex Cleaner (Prompt Cleaner v4.5)
-  # ------------------------------
+  # 4. Regex Cleaner
   - "regex/prompt-cleaner-v4.5.yaml"
-
+  
 safety:
   ensure_no_syntax_leak: true
   validate_prompt_isolation: true
