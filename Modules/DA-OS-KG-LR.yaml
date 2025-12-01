@@ -1,109 +1,205 @@
-# ============================================================
-#  DA-OS-KG-LR.yaml  (DreamArc Official Syntax Module)
-#  Mode: Production / DASF v2.2-PhonemeAssist / UnifiedLayout
-# ============================================================
+# ==========================
+# DreamArc-Core / SyntaxOS
+# KGLR HeroicRock Main OS
+# File: DA-OS-KGLR.yaml
+# ==========================
 
-module_name: "DA-OS-KG-LR"
-version: "v4.2"
-description: "黒鋼レン系・影山ヒロノブ系Heroic Rock構文 / Attack-Drive"
+meta:
+  id: DA-OS-KGLR
+  label: "KG HeroicRock OS"
+  version: "4.4-SCT"
+  role: "SyntaxOS"
+  style_family: "Reiwa Rock × EDM Hybrid × Heroic Rock"
+  base_lab_module: "DA-LAB-KGLR"
+  created: "2025-12-01"
+  updated: "2025-12-01"
 
-# ---------------------------------------
-# Base Lab Module（研究→本番リンク）
-# ---------------------------------------
-base_lab_module: "DA-LAB-KG-LR"
+engine_binding:
+  dasf_version: "v2.2-PhonemeAssist"
+  quickload_version: "v4.4-GA"
+  exclude_engine: "v4.4"
+  include_engine: "v1.0"
+  syntax_module_tag: "<SyntaxModule:DA-KGLR>"
+  output_spec:
+    layout: "Unified Directive Layout"
+    language: "JP-hiragana-main"
+    code_fence: true
+    triple_block: true
+  flags:
+    enable_phonemeassist: true
+    enable_emotionoverflow: true
+    enable_interflow: true
 
-# ---------------------------------------
-# Structure Rules
-# ---------------------------------------
 structure:
-  style: "HeroicRock-SymphoMetal"
-  hopModel: "None"              # ロックは跳ねを抑え、語頭強調で駆動
-  separator_rules: "Inactive"
-  interflow_density: "HIGH"
-  rhythm_dynamics: "ENABLED"    # 速度の揺れ、乱高下を許容
-  momentum_curve: "E3-E6-E8-E5"
-  phoneme_assist: "JP-vowel-open"
+  bpm_default: 145
+  bpm_range: [135, 155]
+  key_default: "Dm"
+  key_suggestion: ["Dm", "Em", "F#m"]
+  sections:
+    intro:
+      tag: "Intro"
+      lines: 2
+      emotion: "tense"
+    verse1:
+      tag: "Verse1"
+      lines: 6
+      emotion: "drive"
+    prechorus1:
+      tag: "PreChorus1"
+      lines: 4
+      emotion: "build"
+    chorus1:
+      tag: "Chorus1"
+      lines: 6
+      emotion: "impact"
+    verse2:
+      tag: "Verse2"
+      lines: 6
+      emotion: "drive"
+    prechorus2:
+      tag: "PreChorus2"
+      lines: 4
+      emotion: "build"
+    chorus2:
+      tag: "Chorus2"
+      lines: 6
+      emotion: "impact"
+    bridge:
+      tag: "Bridge"
+      lines: 4
+      emotion: "dark_twist"
+    last_chorus:
+      tag: "ChorusLast"
+      lines: 8
+      emotion: "heroic_climax"
+    outro:
+      tag: "Outro"
+      lines: 2
+      emotion: "afterglow"
 
-# ---------------------------------------
-# Section Templates
-# ---------------------------------------
-sections:
+rhythm:
+  hop_model: "C"
+  separator_rules:
+    enabled: false
+  flow_density: "medium-high"
+  phrase_length: "short-medium-mix"
+  syncopation_level: "medium"
+  swing_bias: "low"
+  articulation: "tight-aggressive"
 
-  Intro:
-    default_lines: 2
-    emotion: "rise"
-    pacing: "impact"
-    imagery: "burning, metal, ignition"
+melody:
+  tone_profile:
+    brightness: "medium"
+    warmth: "high"
+    clarity: "high"
+  motion:
+    step_motion_ratio: 0.55
+    leap_motion_ratio: 0.45
+    leap_behavior: "on_impact_words_and_hooks"
+  vibrato:
+    usage: "low-medium"
+    position: "long_notes_and_climax"
+  emotional_shape:
+    verse: "inner_conflict"
+    pre_chorus: "tension_and_resolution"
+    chorus: "punch_and_lift"
+    last_chorus: "strain_with_victory_feel"
 
-  Verse:
-    default_lines: 6
-    emotion: "drive"
-    pacing: "fast"
-    story_mode: "battle-start"
-    tone: "solid"
-
-  PreChorus:
-    default_lines: 4
-    emotion: "build"
-    pacing: "tight"
-    lift: "hero-rise"
-    accent: "strong"
-
-  Chorus:
-    default_lines: 6
-    emotion: "explode"
-    pacing: "anthemic"
-    hook_style: "heroic-core"
-    climax: "high-open"
-
-  Bridge:
-    default_lines: 4
-    emotion: "burn"
-    pacing: "break"
-    color: "epic"
-
-  Interlude:
-    tag_required: true
-    options:
-      - neutral
-      - burning
-      - epic
-
-# ---------------------------------------
-# Word & Phoneme Control
-# ---------------------------------------
-phoneme_control:
-  vowel_fade: "long"           # ロック系 → 開く
-  consonant_attack: "explosive"
-  jp_particle_variation:
-    ha_to_wa: true
-    he_to_e: true
-  emphasis_positions:
-    - "語頭アタック（強）"
-    - "サビ前のブレス感"
-    - "高音突き抜け"
-  avoid:
-    - "柔らかすぎる語感"
-    - "ウィスパー系ニュアンス"
-    - "過度にポップな比喩"
-
-# ---------------------------------------
-# Output Decorations
-# ---------------------------------------
-output:
-  require_syntax_tag: true
-  syntax_tag: "<SyntaxModule:DA-OS-KG-LR>"
-  language: "JP-hiragana"
-  outer_header_mode: true
-
-# ---------------------------------------
-# Safety / Filter
-# ---------------------------------------
-exclude_rules:
-  block_words:
-    - "実在歌手名"
-    - "作品タイトル"
+vocal:
+  register_focus: "low-mid_to_mid-high"
+  power_profile:
+    verse: "solid-medium"
+    pre_chorus: "medium-strong"
+    chorus: "strong"
+    last_chorus: "strong-with-grit"
   tone:
-    no_slang: true
-    no_heavy_metal_terms: false   # HeroicRockなので緩和
-    no_hard_violence: true
+    description: "タイトで攻撃的だが、どこか温かさのあるロックボイス"
+  consonant_attack: "strong"
+  vowel_decay: "medium"
+  breath_usage: "minimal"
+  phoneme_assist:
+    enabled: true
+    rules:
+      - "jp_ha_to_wa"
+      - "jp_he_to_e"
+      - "long_vowel_smoothing"
+      - "sokuon_control_for_rock"
+
+lyrics:
+  narrative_focus: false
+  viewpoint:
+    default: "一人称（おれ / ぼく）"
+    shift_allowed: limited
+  theme:
+    typical:
+      - "自分との戦い"
+      - "過去との決別"
+      - "弱さを抱えたまま進む勇気"
+      - "街の夜景やネオンを背景にした心情"
+  word_choice:
+    tone: "street-poetic"
+    allow_metaphor: true
+    allow_symbolic_imagery: true
+    avoid:
+      - "過度な攻撃性・罵倒表現"
+      - "露骨な犯罪賛美"
+  line_structure:
+    verse_line_length: "short-medium"
+    chorus_density: "high"
+    hook_phrase_repetition: "encouraged"
+
+emotionflow:
+  curve_global: "E2 → E4 → E5 → E3"
+  notes:
+    - "Aメロで鬱屈やモヤモヤを提示"
+    - "Bメロで覚悟と選択の瞬間を描く"
+    - "サビでは拳を突き上げるような一歩目を描写"
+    - "ラストサビでは『変わりきれていないけど進む』ニュアンスを残す"
+
+instrumentation:
+  base:
+    - "Drums(Rock_Modern_Tight)"
+    - "Bass(Rock_Dirty)"
+    - "Guitar(Rhythm_Crunch)"
+    - "Guitar(Lead_Singing)"
+    - "Synth(Subtle_EDM_Layer)"
+  optional:
+    - "FX(ReverseImpact, Riser)"
+    - "VocalChop(Background)"
+    - "Piano(Low_Accent)"
+  mix_guidelines:
+    kick_and_bass_sidechain_subtle: true
+    guitars_wide_with_center_lead: true
+    vocal_forward_but_glued_to_band: true
+    low_end_controlled_not_muddy: true
+
+prompt_templates:
+  high_level_tags:
+    - "ReiwaRock"
+    - "HeroicRock"
+    - "EDMHybridRock"
+    - "MalePowerVocal"
+  default_prompt_jp: >
+    令和ロック × EDMハイブリッドのヒロイックロックスタイル。
+    タイトなドラムと歪んだギター、うねるベースに乗せて、
+    等身大の弱さとそれでも前に進もうとする決意を歌う。
+  default_prompt_en: >
+    Reiwa-style hybrid of rock and EDM,
+    with tight drums, distorted guitars and a strong male vocal
+    singing about weakness, resolve and moving forward.
+
+safety:
+  allow_topics:
+    - "心の葛藤"
+    - "街・夜景・ネオン"
+    - "自分なりの正義や信念"
+  avoid_topics:
+    - "具体的な犯罪行為の描写"
+    - "差別的・攻撃的な対象指定"
+    - "露骨なドラッグ賛美"
+  nsfw_level: "safe"
+
+notes:
+  - "本ファイルは本番用 SyntaxOS。研究用の DA-LAB-KGLR.yaml とペアで運用する。"
+  - "攻撃性は『音と歌い方』で表現し、言葉そのものはExludeEngine v4.4の安全ガードと協調させる。"
+  - "Suno 等での生成時は BPM:145 / Key:Dm を推奨スタート値とする。"
