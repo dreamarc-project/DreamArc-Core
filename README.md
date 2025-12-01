@@ -209,6 +209,23 @@ QuickLoad: 5.2
 詳細は LICENSE を参照してください。
 （公開範囲・再利用条件は今後の運用方針により調整される可能性があります）
 
+## License
+
+Copyright (c) 2025 Kazuto Oyama. All rights reserved.
+
+This software is proprietary and confidential. 
+Unauthorized copying, distribution, or modification 
+is strictly prohibited.
+
+For licensing inquiries or permission requests, 
+please contact: k-oyama@dreamarc-studio.jp
+
+### Future Plans
+
+The licensing terms may be updated in the future 
+to allow broader usage. Please check back for updates 
+or contact us for specific use cases.
+
 🧑‍🚀 Credits
 Project Owner: けばさん (Kazuto Oyama)
 
