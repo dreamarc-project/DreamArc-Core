@@ -156,6 +156,7 @@ output_normalization:
   lyrics:
     enforce_triple_block: true   # 🎧 / 🎵 / 🚫 の 3ブロックを必須
     enforce_unified_layout: true
+    insert_blank_before_syntaxmodule: true   # ← 追加！
 
 # ------------------------------------------------------------
 # AI Profile Hooks
