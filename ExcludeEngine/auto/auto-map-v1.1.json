@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "id": "auto-map",
+    "version": "1.1.0",
+    "description": "楽曲プロンプトからジャンル・ムードを解析し、自動的に除外タグを補完するマップ。",
+    "created": "2025-12-01",
+    "updated": "2025-12-01"
+  },
+  "merge_strategy": "append",
+  "custom_rules_allowed": true,
+  "priority": {
+    "genre": 2,
+    "mood": 1
+  },
+  "rules": [
+    {
+      "id": "jpop_light",
+      "match": {
+        "genre_keywords": ["jpop", "j-pop", "pop", "storypop"],
+        "mood_keywords": ["light", "bright", "hopeful"]
+      },
+      "exclude_tags": [
+        "brutal_metal_guitar",
+        "double_pedal_drums",
+        "extreme_screamo_vocal"
+      ]
+    },
+    {
+      "id": "edm_pop",
+      "match": {
+        "genre_keywords": ["edm", "dance", "club"],
+        "mood_keywords": ["uplifting", "energetic"]
+      },
+      "exclude_tags": [
+        "raw_acoustic_drum_only",
+        "full_orchestral_sympathy",
+        "lofi_dust_noise"
+      ]
+    },
+    {
+      "id": "rock_heroic",
+      "match": {
+        "genre_keywords": ["rock", "anison", "hero", "anthem"],
+        "mood_keywords": ["epic", "heroic", "battle"]
+      },
+      "exclude_tags": [
+        "trap_808_sub_only",
+        "lofi_lazy_drums",
+        "toy_instrument_feel"
+      ]
+    },
+    {
+      "id": "lofi_chill",
+      "match": {
+        "genre_keywords": ["lofi", "chill"],
+        "mood_keywords": ["relax", "sleep", "study"]
+      },
+      "exclude_tags": [
+        "brutal_metal_guitar",
+        "overly_epic_anthem",
+        "hardstyle_kick"
+      ]
+    },
+    {
+      "id": "ballad_emotional",
+      "match": {
+        "genre_keywords": ["ballad", "slow"],
+        "mood_keywords": ["sad", "melancholic", "nostalgic"]
+      },
+      "exclude_tags": [
+        "extreme_tempo_change",
+        "hyper_fast_phrase",
+        "club_banger_drop_only"
+      ]
+    }
+  ]
+}
