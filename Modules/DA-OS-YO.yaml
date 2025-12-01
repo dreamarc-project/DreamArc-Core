@@ -7,7 +7,7 @@
 meta:
   id: DA-OS-YO
   label: "YO StoryPop OS"
-  version: "4.1-SCT"
+  version: "4.4-SCT"
   role: "SyntaxOS"
   style_family: "StoryPop J-Pop Narrative × EDM Pop"
   base_lab_module: "DA-LAB-YO"
@@ -16,8 +16,9 @@ meta:
 
 engine_binding:
   dasf_version: "v2.2-PhonemeAssist"
-  quickload_version: "v4.1-GA"
-  exclude_engine: "v3.0"
+  quickload_version: "v4.4-GA"
+  exclude_engine: "v4.4"
+  include_engine: "v1.0"
   syntax_module_tag: "<SyntaxModule:DA-YO>"
   output_spec:
     layout: "Unified Directive Layout"
@@ -185,11 +186,9 @@ prompt_templates:
     - "StoryDrivenJPop"
     - "FastPhrasing"
     - "EmotionalEDM"
-
   default_prompt_jp: >
     YOスタイルの物語性の強いJ-Pop × EDMポップ。
     速いフレーズと緻密な言葉選びで、日常と非日常が交差する物語を描く。
-
   default_prompt_en: >
     YO-style story-driven J-Pop × EDM pop,
     with fast phrasing and literary wording.
@@ -209,6 +208,4 @@ notes:
   - "本ファイルは本番用 SyntaxOS。研究用の DA-LAB-YO.yaml とペアで運用する。"
   - "Separator『・』は YO スタイル指定時のみ有効化される。"
   - "Suno 等での生成時は BPM:128 / Key:Em を推奨スタート値とする。"
-
-  - "Separator『・』は YO スタイル指定時のみ有効化される。"
-  - "Suno 等での生成時は BPM:128 / Key:Em を推奨スタート値とする。"
+  - "Exclude や NSFW 制御は ExcludeEngine v4.4 / IncludeEngine v1.0 側に完全委譲する。"
