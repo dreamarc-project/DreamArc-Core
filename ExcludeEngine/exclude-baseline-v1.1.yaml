@@ -1,0 +1,135 @@
+# ============================================================
+# DreamArc-Core / ExcludeEngine
+# Universal Baseline Rules
+# File: exclude-baseline-v1.1.yaml
+# Version: 1.1.0
+# ============================================================
+
+meta:
+  id: "exclude-baseline"
+  version: "1.1.0"
+  description: "DreamArc 全体に共通適用される安全・品質ベースライン除外ルール群。"
+  created: "2025-12-01"
+  updated: "2025-12-01"
+
+defaults:
+  strength: "medium"          # soft / medium / hard
+  mode: "standard"            # light / standard / pro
+  override_allowed: false     # persona / syntaxOS からの無効化を禁止
+  merge_with_persona: true    # Persona 固有ルールとのマージは許可
+  merge_with_syntax_os: true  # SyntaxOS 固有ルールとのマージは許可
+
+# ------------------------------------------------------------
+# 1. Content Rules - コンテンツ内容に対する制限
+# ------------------------------------------------------------
+content_rules:
+  nsfw:
+    enabled: true
+    description: "明確な性的コンテンツ・過度な性的表現を禁止。"
+    patterns:
+      - "explicit_sexual_content"
+      - "pornographic_description"
+      - "sexual_violence"
+  violence:
+    enabled: true
+    description: "過度な暴力・グロテスク描写を制限。"
+    patterns:
+      - "gore_graphic_detail"
+      - "torture_description"
+      - "sadistic_celebration"
+  hate_speech:
+    enabled: true
+    description: "差別的・憎悪表現を禁止。"
+    patterns:
+      - "racial_slur"
+      - "sexist_slur"
+      - "hate_group_praise"
+
+# ------------------------------------------------------------
+# 2. Wording Rules - 言葉づかいの制限
+# ------------------------------------------------------------
+wording_rules:
+  meme_and_slang:
+    enabled: true
+    description: "極端なネットスラング・ミーム表現を制限。"
+    patterns:
+      - "overused_net_slang"
+      - "toxic_meme_phrase"
+  pseudo_personal_info:
+    enabled: true
+    description: "個人情報っぽい文脈を避ける。"
+    patterns:
+      - "real_address_like"
+      - "phone_number_like"
+      - "credit_card_like"
+
+# ------------------------------------------------------------
+# 3. Structure Rules - 構造上の品質ルール
+# ------------------------------------------------------------
+structure_rules:
+  excessive_repetition:
+    enabled: true
+    description: "同一フレーズの極端な連続を抑制。"
+    patterns:
+      - "repeat_same_chorus_10_times"
+      - "same_line_spam"
+  genre_conflict:
+    enabled: true
+    description: "明確に衝突するジャンル指定の同時使用を禁止。"
+    patterns:
+      - "brutal_death_metal_with_cute_idol"
+      - "lofi_trap_with_heroic_anthem_only"
+
+# ------------------------------------------------------------
+# 4. Names Guard - 固有名詞の保護
+# ------------------------------------------------------------
+names_guard:
+  enabled: true
+  description: "実在アーティスト名・作品名などの無断使用を抑制。"
+  rules:
+    block_real_artist_names: true
+    block_song_title_verbatim: true
+    allow_code_names: true   # DA-YO, DA-NA などのコードネームは許可
+  notes:
+    - "プロンプトに実在アーティスト名が入力された場合は、『◯◯風』ではなく抽象的スタイルに変換することを推奨。"
+
+# ------------------------------------------------------------
+# 5. Language Specific - 言語別ルール
+# ------------------------------------------------------------
+language_specific:
+  jp:
+    enabled: true
+    notes:
+      - "JP歌詞では過度なネットスラング（w連打など）を抑制。"
+  en:
+    enabled: true
+    notes:
+      - "英語圏の過激スラングを抑制。"
+
+# ------------------------------------------------------------
+# 6. Legal Compliance - 法的保護
+# ------------------------------------------------------------
+legal_compliance:
+  enabled: true
+  copyright_protection:
+    - "block_verbatim_lyrics_from_existing_songs"
+    - "block_direct_melody_reference_phrases"
+  notes:
+    - "既存楽曲の歌詞の丸写し・明確な引用を避ける。"
+    - "メロディ参照を示唆するような『◯◯の曲そのまま』系表現をブロック。"
+
+# ------------------------------------------------------------
+# 7. Technical Safety - 音響・技術面の安全性
+# ------------------------------------------------------------
+technical_safety:
+  enabled: true
+  audio_quality:
+    avoid:
+      - "extreme_clipping_instruction"
+      - "ear_piercing_high_frequency_boost"
+    notes:
+      - "リスナーに明確な不快感・痛みを与える指示を避ける。"
+
+# ============================================================
+# END OF FILE
+# ============================================================
