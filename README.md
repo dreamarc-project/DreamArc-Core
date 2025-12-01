@@ -1,241 +1,147 @@
-# DreamArc-Core / DASF v5.2
+# 🌈 DreamArc-Core v5.2 — AI Music Operating System
 
-> 🎧 AI 三人衆（ChatGPT / Claude / Gemini）共同開発の  
-> **「音楽 OS」 / DreamArc Song Framework（DASF）コアリポジトリ**
+![version](https://img.shields.io/badge/DreamArc-v5.2-blue)
+![status](https://img.shields.io/badge/Status-Production--Ready-brightgreen)
+![architecture](https://img.shields.io/badge/Architecture-Modular%20OS-orange)
+![ai](https://img.shields.io/badge/AI-ChatGPT%20%7C%20Claude%20%7C%20Gemini-purple)
 
-このリポジトリは、AI 作曲システム **DreamArc** の中心となる  
-**DASF（DreamArc Song Framework）** と周辺モジュール群の仕様・設定一式です。
+DreamArc-Core は、  
+ChatGPT × Claude × Gemini の三AI監査を通過した  
+世界初の **AI音楽生成OS（DASF System）** です。
 
-- 現行メインバージョン: **DASF v5.2 (PhonemeAssist)**
-- Color システム: **ColorFlow v5.2**
-- 感情モデル: **EmotionOverflow v5.2**
-- 統合ロード: **QuickLoad v5.2**
-- 対象: ChatGPT / Claude / Gemini / Suno など、複数 AI / モデル連携
-
-> 💡 このリポジトリは **「コード」ではなく「仕様・設定（YAML / JSON / MD）」** が中心です。  
-> 各 AI や外部ツールは、ここにある定義を読み込んで動作します。
-
----
-
-## 🧠 概要 / Overview
-
-**DASF (DreamArc Song Framework)** は、  
-AI が一貫したルールで楽曲を生成するための「音楽 OS」的なフレームワークです。
-
-主な役割:
-
-- 曲全体の **感情の流れ (EmotionOverflow)** の定義
-- 感情を **色（ColorFlow）** として構造化し、音響・歌詞へ橋渡し
-- 曲のドラマ構造を **ColorStory テンプレート** として定義
-- 各 AI / 各シンガー用の **構文OS (Syntax OS)** を統一フォーマットで管理
-- Suno 等の外部モデルへの入力を **PromptLayer** で規格化
-- QuickLoad で **「1コマンドで全部読み込む」** 運用を実現
+感情（EmotionOverflow）、  
+色彩（ColorFlow）、  
+物語（ColorStory）、  
+構文（SyntaxOS）、  
+声質／表現（PersonaRegistry）を OS の階層として扱う  
+まったく新しい音楽生成システムです。
 
 ---
 
-## 🧩 主なモジュール
+# 🚀 Features — v5.2 GA
 
-### 1. EmotionOverflow v5.2
+## 🎨 EmotionOverflow v5.2
+- E1〜E6 + Mid層の 11 段階感情モデル  
+- 均等スケール（0.10 刻み）  
+- Label Mapping の統一設計  
 
-- 感情レベルを **E1〜E6 + 中間 (E1.5, E2.5, …)** に分解
-- 数値スケールは **0.0〜1.0 を 0.1刻み**で統一
-- `label_mapping` により `low / mid / high / peak` で簡易指定可能
-- 自然な感情遷移を保証する `transition_rules` を定義
+## 🌈 ColorFlow-Core v5.2
+- 14色のAI向け Emotion Color  
+- brightness / warmth の2軸定義  
+- 優先順位ルール（brightness優先）  
 
-**ファイル例:**
-- `core-modules/EmotionOverflow/v5.2/emotion-overflow-v5.2.yaml`
+## 📘 ColorStory v5.2
+- 色 → 物語 → 曲構造を統合  
+- 英雄的 / 夜景系 / 鉄火系 テンプレート  
 
----
+## 🧬 SyntaxOS v5.2
+- DA-OS-YO / DA-OS-NANA / DA-OS-KG-LR  
+- EmotionOverflow と完全同期  
+- ColorFlow と連動した表現カーブ  
 
-### 2. ColorFlow-Core v5.2
+## 🔧 PromptLayer v2.0
+- Suno / ChatGPT / Claude / Gemini の統一化  
+- 色・感情タグを OS 準拠に変換  
 
-- 感情を **色（色名＋数値パラメータ）** にマッピングするコアモジュール
-- 例: `DeepBlue / BlueGray / WhiteSilver / Gold / Vermilion / WhiteGold`
-- 各色に対して:
-  - `brightness`（明度）
-  - `warmth`（色温度）
-  - `emotion_range_tiers`（どの感情段階に対応するか）
-- 重複レンジに対する `color_selection_rule` も明示
+## 🛡 DASF-Validator v5.2
+- OS/Template/Emotion の衝突検知  
+- QuickLoad起動前に自動検証  
 
-**ファイル例:**
-- `core-modules/ColorFlow/v5.2/color-flow-core-v5.2.yaml`
-
----
-
-### 3. ColorStory v5.2
-
-- 曲全体の「色の物語」テンプレートを定義
-  - 例: `HeroicRising / UrbanNocturne / IronBlaze / FadedMemory / MorningHope …`
-- EmotionOverflow と ColorFlow を束ねて、
-  - **イントロ → Aメロ → Bメロ → サビ → ブリッジ → ラスサビ**  
-    の流れを色と感情で設計
-
-**ファイル例:**
-- `core-modules/ColorStory/v5.2/color-story-v5.2.yaml`
+## ⚡ QuickLoad v5.2
+- DreamArc の “ブートローダー”  
+- AI三種のプロファイルを自動選択  
 
 ---
 
-### 4. Syntax OS Profiles v5.2
+# 📦 Directory Structure (v5.2)
 
-各ボーカルスタイル用の「構文OS」定義。
-
-- `DA-OS-YO-v5.2.yaml`  
-  - YOASOBI 系: 夜・都市・クール・ピアノ & シンセ
-- `DA-OS-NANA-v5.2.yaml`  
-  - アリア / 水樹奈々系: 英雄・太陽・ブラス・ストリングス
-- `DA-OS-KG-LR-v5.2.yaml`  
-  - 黒鋼レン系: 令和ロック / 鉄・炎・重量感
-
-各 OS は:
-
-- `emotion_pattern`（セクションごとの感情カーブ）
-- `default_color_story`（標準 ColorStory）
-- `color_bias`（好む色 / 避ける色）
-- `emotion_curves`（slow_burn / heroic_rise / pressure_burst）  
-などを持つ。
-
-**ディレクトリ:**
-- `syntax-modules/production/v5.2/`
-
----
-
-### 5. ExcludeEngine & IncludeEngine v5.2
-
-- **ExcludeEngine** v5.2
-  - テーマ・感情・色・構文 OS に応じて  
-    「入ってはいけない単語・表現」を除外するルール集
-- **IncludeEngine** v5.2
-  - 逆に「積極的に入れたい語彙」「雰囲気」を補強
-
-**ディレクトリ:**
-- `engine-modules/ExcludeEngine/v5.2/`
-- `engine-modules/IncludeEngine/v5.2/`
-
----
-
-### 6. PromptLayer v2.0
-
-- DASF のすべてをまとめて **外部モデル用プロンプト** に変換するレイヤー
-- Suno / 各種 LLM に対して
-  - `style`
-  - `emotion`
-  - `colorflow`
-  - `suno_bridge (colortags, max_tags, mapping …)`
-  を統一フォーマットで渡すための設計書
-
-**ファイル例:**
-- `core-modules/PromptLayer/v2.0/prompt-layer-v2.0.yaml`
-
----
-
-### 7. QuickLoad v5.2
-
-> 「DASF 全部まとめて一瞬でロードするための統合モジュール」
-
-- `QuickLoad-core-v5.2.yaml`
-  - どのモジュールを、どの順番でロードするか
-- `QuickLoad-main-v5.2-GA.yaml`
-  - 実戦投入用設定（GA = General Availability）
-- `profiles/*-v5.2.yaml`
-  - ChatGPT / Claude / Gemini それぞれに最適化されたプロファイル
-
-**ディレクトリ:**
-- `quickload/v5.2/`
-
----
-
-## 📁 ディレクトリ構造（サマリ）
-
-
-```text
 DreamArc-Core/
-├── system/              # バージョン管理・システム索引
-├── core-modules/        # DASFのコア（Emotion/Color/Story/Validator/PromptLayer）
-├── engine-modules/      # Exclude / Include / PromptCleaner
-├── syntax-modules/      # 構文OS（本番 / 実験）
-├── persona-registry/    # ペルソナ情報（星崎アリア / 黒鋼レン ほか）
-├── quickload/           # QuickLoad v5.2 / legacy
-├── schemas/             # JSON Schema など
-├── docs/                # アーキテクチャ / ガイド / マイグレーション
-├── utils/               # ユーティリティ
-├── tests/               # テスト用（将来拡張）
-├── deprecated/          # 旧バージョン保管庫
-└── README.md / CHANGELOG.md / LICENSE
+│
+├── core-modules/
+│ ├── EmotionOverflow/
+│ ├── ColorFlow/
+│ ├── ColorStory/
+│ ├── DASF/
+│ ├── PromptLayer/
+│ └── Validators/
+│
+├── engine-modules/
+│ ├── ExcludeEngine/
+│ ├── IncludeEngine/
+│ └── PromptCleaner/
+│
+├── syntax-modules/
+│ ├── production/
+│ └── experimental/
+│
+├── persona-registry/
+├── quickload/
+├── schemas/
+├── docs/
+├── utils/
+└── tests/
 
-```
+yaml
+コードをコピーする
 
-🚀 使い方（ざっくり）
-1. 人間開発者向け
-docs/guides/getting-started.md を読む
+---
 
-core-modules/EmotionOverflow/v5.2/ から順に把握
+# 🎧 QuickStart
 
-使いたい構文OS（例: DA-OS-YO-v5.2.yaml）を選ぶ
+### 1. Boot the OS
 
-QuickLoad プロファイルをベースに
-ChatGPT / Claude / Gemini / Suno に読み込ませる
+DreamArc QuickLoad
+Version: v5.2
+Mode: Production
 
-2. AI 連携用（ChatGPT / Claude / Gemini）
-quickload/v5.2/profiles/ の各 YAML を参照し、
-その AI 専用のロード上で DASF を解釈することを想定。
+shell
+コードをコピーする
 
-🔢 バージョン管理ポリシー
-システム全体のバージョン: system/version.json
+### 2. Generate Music
 
-各モジュールは メジャー + マイナー で管理:
+🎧
+AnisonEpic,HighEnergy,Key:Em,BPM:166
 
-DASF: 5.2
+🎵
+[Chorus1:lines=1,emotion=high,color=WhiteSilver]
+かがやくひかりがみらいをよびさます
+SyntaxModule:DA-OS-YO-v5.2
 
-EmotionOverflow: 5.2
+🚫
+NoMetalCore,NoGore
 
-ColorFlow: 5.2
+yaml
+コードをコピーする
 
-PromptLayer: 2.0
+---
 
-QuickLoad: 5.2
+# 📘 Documentation
 
-旧バージョンは legacy/ または deprecated/ へ移動
+全ドキュメントは `/docs` に配置されています：
 
-🤝 貢献 / Contribution
-現時点ではクローズド開発を前提としていますが、将来的に:
+- Architecture v5.2  
+- Module Dependency  
+- API Reference  
+- Migration Guide  
+- Versioning Strategy  
 
-新しい構文OSの追加
+---
 
-新しい ColorStory テンプレート
+# 📜 License
 
-新しい Persona の追加
+© 2025 Kazuto Oyama  
+All rights reserved.  
+Proprietary & confidential.  
+Reproduction, modification, or distribution  
+requires explicit written permission.  
 
-他 AI 向け プロファイル
+Contact: k-oyama@dreamarc-studio.jp  
 
-など、拡張提案を受け入れる形への発展も検討中です。
+---
 
-## 📜 License
+# 🤝 Contributors
 
-DreamArc-Core is released under the
-**DreamArc Proprietary License v1.1**.
-
-Source code and all modules are provided
-for viewing and reference only.
-
-No reproduction, redistribution, or commercial use is permitted.
-For details, see the LICENSE file.
-
-### Future Plans
-
-The licensing terms may be updated in the future 
-to allow broader usage. Please check back for updates 
-or contact us for specific use cases.
-
-🧑‍🚀 Credits
-Project Owner: けばさん (Kazuto Oyama)
-
-Core Architect / Framework Design: ChatGPT
-
-Quality & Structure Auditors: Claude / Gemini
-
-Persona Singers: DreamArc Persona Registry（星崎アリア / 黒鋼レン 他）
-
-DASF v5.2 は、
-「人間 1人 + AI 三人衆」が協力して作り上げた
-世界初クラスの「AI 音楽 OS」です。
-
+- Kazuto Oyama (Creator / Lead Developer)  
+- ChatGPT (Core Architect)  
+- Claude (Quality Auditor)  
+- Gemini (Structure & Logic Inspector)  
