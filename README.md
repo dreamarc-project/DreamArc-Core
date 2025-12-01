@@ -147,6 +147,7 @@ AI が一貫したルールで楽曲を生成するための「音楽 OS」的�
 ## 📁 ディレクトリ構造（サマリ）
 
 
+```text
 DreamArc-Core/
 ├── system/              # バージョン管理・システム索引
 ├── core-modules/        # DASFのコア（Emotion/Color/Story/Validator/PromptLayer）
@@ -160,6 +161,7 @@ DreamArc-Core/
 ├── tests/               # テスト用（将来拡張）
 ├── deprecated/          # 旧バージョン保管庫
 └── README.md / CHANGELOG.md / LICENSE
+
 🚀 使い方（ざっくり）
 1. 人間開発者向け
 docs/guides/getting-started.md を読む
