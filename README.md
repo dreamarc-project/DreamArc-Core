@@ -209,21 +209,16 @@ QuickLoad: 5.2
 
 など、拡張提案を受け入れる形への発展も検討中です。
 
-📜 ライセンス
-詳細は LICENSE を参照してください。
-（公開範囲・再利用条件は今後の運用方針により調整される可能性があります）
+## 📜 License
 
-## License
+DreamArc-Core is distributed under the
+**DreamArc Proprietary License v1.1**  
+(Closed-Source / No Redistribution / No Commercial Use).
 
-Copyright (c) 2025 Kazuto Oyama. All rights reserved.
+Source code is provided ONLY for viewing and reference.
+All other rights are reserved by the copyright holder.
 
-This software is proprietary and confidential. 
-Unauthorized copying, distribution, or modification 
-is strictly prohibited.
-
-For licensing inquiries or permission requests, 
-please contact: k-oyama@dreamarc-studio.jp
-
+See the LICENSE file for details.
 ### Future Plans
 
 The licensing terms may be updated in the future 
