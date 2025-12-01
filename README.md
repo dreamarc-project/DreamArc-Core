@@ -146,7 +146,7 @@ AI が一貫したルールで楽曲を生成するための「音楽 OS」的�
 
 ## 📁 ディレクトリ構造（サマリ）
 
-```text
+
 DreamArc-Core/
 ├── system/              # バージョン管理・システム索引
 ├── core-modules/        # DASFのコア（Emotion/Color/Story/Validator/PromptLayer）
@@ -222,5 +222,3 @@ DASF v5.2 は、
 「人間 1人 + AI 三人衆」が協力して作り上げた
 世界初クラスの「AI 音楽 OS」です。
 
-markdown
-コードをコピーする
