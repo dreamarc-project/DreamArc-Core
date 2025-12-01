@@ -1,0 +1,56 @@
+# ============================================================
+# DreamArc QuickLoad v4.5-GA (Public Loader)
+# Purpose:
+#   - Load all v4.5 core engines, modules, regex cleaners, and engines
+#   - Guarantee ZERO syntax leakage in FinalPrompt
+#   - Provide stable TripleBlock + OuterHeaderMode output
+# ============================================================
+
+quickload:
+  version: "4.5-GA"
+  mode: "FullLoad"
+  target_dasf: "v2.2-PhonemeAssist"
+
+load_order:
+
+  # ------------------------------
+  # 1. Core Engine (必須)
+  # ------------------------------
+  - "QuickLoad/core/QuickLoad-core-v4.5.yaml"
+
+  # ------------------------------
+  # 2. SyntaxModules v4.5
+  #    ※構文OSは Prompt と分離し Lyrics のみ修飾
+  # ------------------------------
+  - "Modules/DA-YO-v4.5.yaml"
+  - "Modules/DA-NANA-v4.5.yaml"
+  - "Modules/DA-KG-LR-v4.5.yaml"
+
+  # ------------------------------
+  # 3. Engines (Exclude / Include)
+  # ------------------------------
+  - "ExcludeEngine/exclude-engine-v3.0.yaml"
+  - "IncludeEngine/include-engine-v2.0.yaml"
+
+  # ------------------------------
+  # 4. Regex Cleaner (Prompt Cleaner v4.5)
+  # ------------------------------
+  - "regex/prompt-cleaner-v4.5.yaml"
+
+safety:
+  ensure_no_syntax_leak: true
+  validate_prompt_isolation: true
+  strict_cleaner: true
+  verify_modules: true
+
+output:
+  outer_header_mode: true
+  triple_block: true
+  code_fence: true
+  unified_directive_layout: true
+
+options:
+  persona_registry_sync: true
+  creator_expansion_mode: "ENABLED"
+  auto_rebind: true
+  display_spec: "JP v2.9"
