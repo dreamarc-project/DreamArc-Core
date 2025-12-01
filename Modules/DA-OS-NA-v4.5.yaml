@@ -1,0 +1,32 @@
+# ============================================================
+# SyntaxModule: DA-OS-NA v4.5
+# Style: 水樹奈々系（強アタック + 高音クリア）
+# ============================================================
+
+module:
+  id: "DA-OS-NA-v4.5"
+  export_meta_to_prompt: false
+
+  attach:
+    position: "lyrics_tail"
+    tag: "<SyntaxModule:DA-OS-NA>"
+
+  phoneme:
+    vibrato: "Strong"
+    attack: "Sharp"
+    vowel_pressure: "High"
+    breath_reduction: true
+    long_note_stability: "High"
+
+  dynamics:
+    accent_drive: "HighBoost"
+    line_density: "High"
+    brightness: "Crystal"
+
+  emotion:
+    base: "Heroic"
+    curve: "E2→E5→E6"
+
+  phrasing:
+    cut_particle_noise: true
+    maintain_clear_consonants: true
