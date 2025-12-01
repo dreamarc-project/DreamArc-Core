@@ -1,0 +1,78 @@
+# ============================================================
+# DreamArc-Core / IncludeEngine
+# Main Engine Orchestrator
+# File: include-engine-v4.5.yaml
+# Version: 4.5.0
+# ============================================================
+
+meta:
+  id: "IncludeEngine"
+  version: "4.5.0"
+  description: "Baseline Include + Persona Include を統合。PromptCleaner と独立した Include 専用エンジン。"
+  created: "2025-12-01"
+  updated: "2025-12-01"
+
+# ------------------------------------------------------------
+# Include Source Definitions
+# ------------------------------------------------------------
+sources:
+  baseline:
+    path: "IncludeEngine/include-baseline-v1.0.yaml"
+    required: true
+
+  persona:
+    path: "IncludeEngine/persona-include-map-v1.0.yaml"
+    required: false    # Persona が無ければスキップ可能
+
+  # syntax_os:
+  #   path: "IncludeEngine/syntax-os-include-map.yaml"
+  #   required: false   # v4.5 では未使用（構文OS非依存）
+
+# ------------------------------------------------------------
+# Merge Order
+# ------------------------------------------------------------
+merge_order:
+  - "baseline"
+  - "persona"
+  # - "syntax_os"        # ★ v4.5 では使用しない
+
+# ------------------------------------------------------------
+# Merge Strategy
+# ------------------------------------------------------------
+merge_strategy:
+  default: "append"           # append / replace
+  allow_persona_override: true
+  allow_syntax_os_override: false   # ★構文OS関連を無効化
+
+# ------------------------------------------------------------
+# Conflict Resolution
+# ------------------------------------------------------------
+conflict_resolution:
+  enabled: true
+  description: "ExcludeEngine と IncludeEngine の衝突を処理。"
+  check_exclude_overlap: true
+  priority: "include_first"   # include_first / exclude_first
+  log_conflicts: true
+  action_on_conflict: "warn"  # warn / error / auto_resolve
+
+# ------------------------------------------------------------
+# Validation Rules
+# ------------------------------------------------------------
+validation:
+  enabled: true
+  check_sources_on_load: true
+  report_missing_files: true
+  fallback_behavior: "warn"   # warn / error / silent
+
+# ------------------------------------------------------------
+# Runtime Settings
+# ------------------------------------------------------------
+runtime:
+  cache_enabled: true
+  cache_scope: "per_session"
+  allow_custom_rules: true
+  custom_rules_merge_strategy: "append"
+
+# ============================================================
+# END OF FILE
+# ============================================================
