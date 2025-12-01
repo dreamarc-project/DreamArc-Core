@@ -1,0 +1,31 @@
+# ============================================================
+# SyntaxModule: DA-OS-YO v4.5
+# Style: YOASOBI系（軽跳ね・透明感・流麗メロディ重視）
+# ============================================================
+
+module:
+  id: "DA-OS-YO-v4.5"
+  export_meta_to_prompt: false
+
+  attach:
+    position: "lyrics_tail"
+    tag: "<SyntaxModule:DA-OS-YO>"
+
+  phoneme:
+    hop_model: "B"          # YOASOBI風 語頭ジャンプ＋語尾スラー
+    separator: "NONE"       # YOASOBI風指定時以外「・」禁止
+    vowel_smooth: true
+    consonant_soft: true
+
+  dynamics:
+    flow: "Smooth"
+    accent_curve: "SoftDrive"
+    line_density: "Medium"
+
+  emotion:
+    base: "LightEmotional"
+    curve: "E1→E3→E5"
+
+  phrasing:
+    allow_phrase_extensions: true
+    suppress_redundant_particles: true
