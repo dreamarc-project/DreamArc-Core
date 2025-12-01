@@ -1,16 +1,30 @@
 system:
-  version: "5.2.0"
-  description: "DreamArc-Core / DASF v5.2 integrated index"
+  version: "5.2"
+  description: "DreamArc-Core unified module index"
 
-paths:
-  dasf_spec: "core-modules/DASF/v5.2/DASF-v5.2-PhonemeAssist.md"
-  emotion_overflow: "core-modules/EmotionOverflow/v5.2/emotion-overflow-v5.2.yaml"
-  color_flow: "core-modules/ColorFlow/v5.2/color-flow-core-v5.2.yaml"
-  color_story: "core-modules/ColorStory/v5.2/color-story-v5.2.yaml"
-  syntax_os_root: "syntax-modules/production/v5.2"
-  persona_registry: "persona-registry/v5.2/registry.yaml"
-  quickload_core: "quickload/v5.2/core/QuickLoad-core-v5.2.yaml"
-  quickload_main: "quickload/v5.2/main/QuickLoad-main-v5.2-GA.yaml"
-  exclude_engine: "engine-modules/ExcludeEngine/v5.2/exclude-engine-v5.2.yaml"
-  include_engine: "engine-modules/IncludeEngine/v5.2/include-engine-v5.2.yaml"
-  validator: "core-modules/Validators/v5.2/dasf-validator-v5.2.yaml"
+core-modules:
+  - EmotionOverflow v5.2
+  - ColorFlow v5.2
+  - ColorStory v5.2
+  - DASF v5.2
+  - PromptLayer v2.0
+  - Validators v5.2
+
+engine-modules:
+  - ExcludeEngine v5.2
+  - IncludeEngine v5.2
+  - PromptCleaner v4.5
+
+syntax-modules:
+  - DA-OS-YO v5.2
+  - DA-OS-NANA v5.2
+  - DA-OS-KG-LR v5.2
+
+persona-registry:
+  - Aria v5.2
+  - Ren v5.2
+  - (その他登録済み)
+
+quickload:
+  - QuickLoad-core v5.2
+  - QuickLoad-main v5.2
