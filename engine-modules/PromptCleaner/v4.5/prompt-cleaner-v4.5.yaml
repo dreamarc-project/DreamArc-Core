@@ -1,0 +1,11 @@
+version: "4.5"
+id: "PromptCleaner-v4.5"
+
+normalize:
+  collapse_spaces: true
+  trim_punctuation: true
+
+forbidden_patterns:
+  - "artist name"
+  - "cover"
+  - "remix"

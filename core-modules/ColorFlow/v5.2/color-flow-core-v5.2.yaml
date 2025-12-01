@@ -1,0 +1,67 @@
+version: "5.2"
+id: "ColorFlow-Core-v5.2"
+description: "Emotion tiers → color symbolic mapping."
+
+colors:
+  DeepBlue:
+    brightness: 0.2
+    warmth: 0.2
+    hue: "blue"
+    emotion_range: ["E1", "E1_5"]
+    description: "深い青・静寂・深海・夜の底"
+  BlueGray:
+    brightness: 0.3
+    warmth: 0.3
+    hue: "blue_gray"
+    emotion_range: ["E1_5", "E2", "E2_5"]
+    description: "青灰色・曇天・揺らぎ"
+  WhiteSilver:
+    brightness: 0.6
+    warmth: 0.4
+    hue: "white_silver"
+    emotion_range: ["E3", "E3_5"]
+    description: "白銀・希望・月光"
+  Gold:
+    brightness: 0.8
+    warmth: 0.8
+    hue: "gold"
+    emotion_range: ["E3_5", "E4", "E4_5"]
+    description: "金色・英雄・勝利"
+  Vermilion:
+    brightness: 0.85
+    warmth: 0.9
+    hue: "vermilion"
+    emotion_range: ["E4_5", "E5"]
+    description: "朱色・紅蓮・激情"
+  WhiteGold:
+    brightness: 1.0
+    warmth: 0.9
+    hue: "white_gold"
+    emotion_range: ["E5", "E6"]
+    description: "白金・閃光・最終解放"
+
+emotion_range_tiers:
+  E1:   [DeepBlue]
+  E1_5: [DeepBlue, BlueGray]
+  E2:   [BlueGray]
+  E2_5: [BlueGray, WhiteSilver]
+  E3:   [WhiteSilver]
+  E3_5: [WhiteSilver, Gold]
+  E4:   [Gold]
+  E4_5: [Gold, Vermilion]
+  E5:   [Vermilion, WhiteGold]
+  E6:   [WhiteGold]
+
+color_selection_rule:
+  on_overlap: "prefer_higher_brightness"
+  description: >
+    emotion_range_tiers に複数の色が存在する場合、
+    brightness の値が最も高い color を優先的に選択する。
+
+suno_tags_hint:
+  DeepBlue: ["deep", "blue", "atmospheric"]
+  BlueGray: ["moody", "grey", "low_intensity"]
+  WhiteSilver: ["bright", "silver", "hopeful"]
+  Gold: ["golden", "triumphant", "epic"]
+  Vermilion: ["fiery", "intense", "aggressive"]
+  WhiteGold: ["blinding", "finale", "anthemic"]

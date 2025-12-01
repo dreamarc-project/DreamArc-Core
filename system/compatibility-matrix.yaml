@@ -1,0 +1,26 @@
+system_version: "5.2.0"
+modules:
+  DASF:
+    version: "5.2"
+    compatible_quickload: ["5.2"]
+  EmotionOverflow:
+    version: "5.2"
+    compatible_quickload: ["5.2"]
+  ColorFlow:
+    version: "5.2"
+    compatible_quickload: ["5.2"]
+  ColorStory:
+    version: "5.2"
+    compatible_quickload: ["5.2"]
+  SyntaxOS:
+    version: "5.2"
+    compatible_quickload: ["5.2"]
+  ExcludeEngine:
+    version: "5.2"
+    compatible_quickload: ["5.2"]
+  IncludeEngine:
+    version: "5.2"
+    compatible_quickload: ["5.2"]
+  PromptLayer:
+    version: "2.0"
+    compatible_quickload: ["5.2"]

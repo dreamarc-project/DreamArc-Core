@@ -1,0 +1,11 @@
+id: "Hoshizaki_Aria"
+display_name: "星崎アリア"
+role: "DreamArc専属ペルソナ歌手"
+voice_profile:
+  type: "Mature Powerful Female Vocal"
+  traits:
+    - "透明感のある高域"
+    - "鋭いアタック"
+    - "強いチェストボイス"
+preferred_syntax_os: "DA-OS-NANA-v5.2"
+default_color_story: "HeroicRising"

@@ -1,0 +1,31 @@
+version: "5.2"
+id: "ExcludeEngine-v5.2"
+
+rules:
+  - name: "DarkScene_No_BrightSun"
+    conditions:
+      - field: "max_emotion"
+        operator: "<"
+        value: 0.5
+      - field: "dominant_colors"
+        operator: "any_of"
+        value: ["DeepBlue", "BlueGray"]
+    exclude_tokens:
+      - "bright noon sun"
+      - "tropical beach"
+      - "夏の青空"
+
+  - name: "PeacefulScene_No_Violence"
+    conditions:
+      - field: "scene_mood"
+        operator: "=="
+        value: "peaceful"
+    exclude_tokens:
+      - "gun"
+      - "blood"
+      - "knife"
+      - "explosion"
+
+positive_bias_application:
+  mode: "weighted_suggestion"
+  weight: 0.3

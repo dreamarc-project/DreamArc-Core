@@ -1,0 +1,40 @@
+version: "5.2"
+id: "ColorStory-v5.2"
+
+base_templates:
+  HeroicRising:
+    description: "暗い導入から英雄的クライマックスへ向かう王道アニソンパターン"
+    sequence: [DeepBlue, BlueGray, WhiteSilver, Gold, Vermilion, WhiteGold]
+    default_use:
+      syntax_os: ["DA-OS-NANA-v5.2"]
+      persona: ["Hoshizaki_Aria"]
+  UrbanNocturne:
+    description: "都市の夜を駆け抜ける YOASOBI 系の色彩パターン"
+    sequence: [DeepBlue, BlueGray, WhiteSilver, Gold, WhiteGold]
+    default_use:
+      syntax_os: ["DA-OS-YO-v5.2"]
+  IronBlaze:
+    description: "鉄と炎で描く令和ロック・バトル系パターン"
+    sequence: [DeepBlue, BlueGray, Gold, Vermilion, WhiteGold]
+    default_use:
+      syntax_os: ["DA-OS-KG-LR-v5.2"]
+
+adaptation_rules:
+  per_syntax_os:
+    DA-OS-YO-v5.2:
+      prefer_templates: ["UrbanNocturne"]
+      avoid_templates: ["IronBlaze"]
+    DA-OS-NANA-v5.2:
+      prefer_templates: ["HeroicRising"]
+      avoid_templates: []
+    DA-OS-KG-LR-v5.2:
+      prefer_templates: ["IronBlaze"]
+      avoid_templates: []
+
+transition_validator:
+  check_brightness_jump:
+    max_delta: 0.45
+    warn_if_exceeded: true
+  check_warmth_jump:
+    max_delta: 0.5
+    warn_if_exceeded: true

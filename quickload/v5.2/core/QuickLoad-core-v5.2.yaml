@@ -1,0 +1,14 @@
+version: "5.2"
+id: "QuickLoad-Core-v5.2"
+
+modules:
+  dasf_spec: "../../core-modules/DASF/v5.2/DASF-v5.2-PhonemeAssist.md"
+  emotion_overflow: "../../core-modules/EmotionOverflow/v5.2/emotion-overflow-v5.2.yaml"
+  color_flow: "../../core-modules/ColorFlow/v5.2/color-flow-core-v5.2.yaml"
+  color_story: "../../core-modules/ColorStory/v5.2/color-story-v5.2.yaml"
+  prompt_layer: "../../core-modules/PromptLayer/v2.0/prompt-layer-v2.0.yaml"
+  exclude_engine: "../../engine-modules/ExcludeEngine/v5.2/exclude-engine-v5.2.yaml"
+  include_engine: "../../engine-modules/IncludeEngine/v5.2/include-engine-v5.2.yaml"
+  validators:
+    - "../../core-modules/Validators/v5.2/dasf-validator-v5.2.yaml"
+    - "../../core-modules/Validators/v5.2/system-validator-v5.2.yaml"

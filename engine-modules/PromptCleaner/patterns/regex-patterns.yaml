@@ -1,0 +1,3 @@
+patterns:
+  strip_brackets: "\\[.*?\\]"
+  multiple_spaces: "\\s+"

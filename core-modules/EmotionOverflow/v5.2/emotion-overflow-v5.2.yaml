@@ -1,0 +1,72 @@
+version: "5.2"
+id: "EmotionOverflow-v5.2"
+description: "0.0–1.0 scale emotion tiers with 0.1 step and label mapping."
+
+tiers:
+  E1:
+    value: 0.0
+    label: "deep_silence"
+    description: "静寂・内省・影"
+  E1_5:
+    value: 0.1
+    label: "faint_stir"
+    description: "わずかな揺らぎ・予感"
+  E2:
+    value: 0.2
+    label: "low_tension"
+    description: "控えめな不安・前段階"
+  E2_5:
+    value: 0.3
+    label: "growing_conflict"
+    description: "葛藤が表面化しはじめる"
+  E3:
+    value: 0.4
+    label: "clear_hope"
+    description: "希望・前向きな決意"
+  E3_5:
+    value: 0.6
+    label: "elegant_brightness"
+    description: "上品で安定した高揚"
+  E4:
+    value: 0.7
+    label: "high_drive"
+    description: "強い推進力・サビ前後"
+  E4_5:
+    value: 0.8
+    label: "max_intensity"
+    description: "ラスサビ直前の極限"
+  E5:
+    value: 0.9
+    label: "climax_peak"
+    description: "クライマックス・感情の爆発"
+  E6:
+    value: 1.0
+    label: "final_release"
+    description: "解放・エンディングのカタルシス"
+
+label_mapping:
+  low: 0.1
+  mid: 0.4
+  high: 0.7
+  peak: 0.9
+  neutral: 0.4
+
+transition_rules:
+  max_step_default: 0.35
+  allow_hard_jump:
+    - from: "intro"
+      to: "final_chorus"
+      max_delta: 0.9
+    - from: "bridge"
+      to: "final_chorus"
+      max_delta: 0.5
+
+visual_guide:
+  intensity_bars:
+    E1: "▁"
+    E2: "▂"
+    E3: "▃"
+    E3_5: "▅"
+    E4: "▆"
+    E5: "▇"
+    E6: "█"

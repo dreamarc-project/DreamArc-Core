@@ -1,0 +1,10 @@
+version: "5.2"
+id: "System-Validator-v5.2"
+
+checks:
+  - name: "ModuleVersionCompatibility"
+    description: "system/version.json と各モジュールの version フィールドの整合性チェック"
+    severity: "error"
+  - name: "LegacyModuleIsolation"
+    description: "legacy/ 以下にある旧モジュールが QuickLoad v5.2 から参照されていないことを確認"
+    severity: "warning"
