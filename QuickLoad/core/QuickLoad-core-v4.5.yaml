@@ -1,0 +1,98 @@
+# ============================================================
+# DreamArc QuickLoad Core Engine v4.5-GA
+# Purpose:
+#   - Full separation of PromptLayer / SyntaxModuleLayer
+#   - Guarantee ZERO syntax/module leakage into FinalPrompt
+#   - Apply prompt-cleaner-v4.5 AFTER PromptBuilder
+#   - Maintain compatibility with ExcludeEngine v3.0
+# Spec:
+#   - DASF v2.2-PhonemeAssist
+#   - Unified Directive Layout
+#   - Outer Header Mode + TripleBlock Output
+# ============================================================
+
+core:
+  version: "4.5-GA"
+  target_dasf: "v2.2-PhonemeAssist"
+  unified_directive_layout: true
+  outer_header_mode: true
+  triple_block_output: true
+  code_fence_output: true
+
+layers:
+
+  # ------------------------------------------------------------
+  # LAYER 1: PromptBuilder
+  # 構文OSを一切知らない “純粋な Prompt 生成層”
+  # ------------------------------------------------------------
+  prompt_builder:
+    join_mode: "append"
+    allow_tags: true
+    remove_keys: true
+    output: "PromptRaw"
+
+  # ------------------------------------------------------------
+  # LAYER 2: PromptCleaner v4.5
+  # PromptBuilder の後ろで発動する「構文名完全除去」専用レイヤー
+  # ------------------------------------------------------------
+  prompt_cleaner:
+    enabled: true
+    ruleset: "regex/prompt-cleaner-v4.5.yaml"
+    input: "PromptRaw"
+    output: "PromptClean"
+
+  # ------------------------------------------------------------
+  # LAYER 3: ExcludeEngine v3.0
+  # PromptClean を材料に Exclude ワード処理を行う
+  # ------------------------------------------------------------
+  exclude_engine:
+    enabled: true
+    engine_file: "ExcludeEngine/exclude-engine-v3.0.yaml"
+    input: "PromptClean"
+    output: "PromptExcludeApplied"
+
+  # ------------------------------------------------------------
+  # LAYER 4: IncludeEngine v2.0
+  # Prompt 整形の最終工程（Optional Tags 注入）
+  # ------------------------------------------------------------
+  include_engine:
+    enabled: true
+    engine_file: "IncludeEngine/include-engine-v2.0.yaml"
+    input: "PromptExcludeApplied"
+    output: "FinalPrompt"
+
+  # ------------------------------------------------------------
+  # LAYER 5: LyricsBuilder
+  # 歌詞は Prompt と完全分離した別層で構築
+  # ------------------------------------------------------------
+  lyrics_builder:
+    directive_format: "Unified"
+    allow_kanji: true
+    allow_section_tags: true
+    output: "LyricsCore"
+
+  # ------------------------------------------------------------
+  # LAYER 6: SyntaxModuleAttach
+  # Prompt に触らず、Lyrics のみを修飾する
+  # ------------------------------------------------------------
+  syntax_module_attach:
+    enabled: true
+    attach_position: "lyrics_tail"
+    export_meta_to_prompt: false
+    # SyntaxModule 本体は QuickLoad-v4.5-GA 側で読み込み指定
+    input: "LyricsCore"
+    output: "LyricsFinal"
+
+output:
+  prompt: "FinalPrompt"
+  lyrics: "LyricsFinal"
+  block_mode: "TripleBlock"
+  code_fence: true
+  outer_header: true
+
+quickload:
+  verify_modules: true
+  auto_rebind: true
+  persona_registry_sync: true
+  display_spec: "JP v2.9"
+  creator_expansion_mode: "ENABLED"
