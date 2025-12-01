@@ -1,6 +1,6 @@
 # ============================================================
 # SyntaxModule: DA-OS-KG-LR v4.5
-# Style: 影山ヒロノブ系 Mature Rock（黒鋼レン向け）
+# Style: 影山ヒロノブ系 Mature Heroic Rock（黒鋼レン向け）
 # ============================================================
 
 module:
@@ -8,7 +8,8 @@ module:
   export_meta_to_prompt: false
 
   attach:
-    position: "lyrics_tail"
+    position: "newline_tail"
+    newline_before_tag: true
     tag: "<SyntaxModule:DA-OS-KG-LR>"
 
   phoneme:
@@ -30,3 +31,4 @@ module:
   phrasing:
     tighten_phrase_edges: true
     maintain_attack_pressure: true
+
