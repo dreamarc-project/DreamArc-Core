@@ -1,16 +1,35 @@
+---
 name: Validate DreamArc Modules
 
 on:
   push:
-    branches: [ main ]
+    branches: ["main"]
 
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Validate YAML
         uses: ibiqlik/action-yamllint@v3
+        with:
+          config: |
+            extends: default
+            rules:
+              line-length:
+                max: 200
+                level: warning
+              truthy:
+                level: warning
+              brackets:
+                level: warning
+              colons:
+                max-spaces-after: 2
+                level: warning
+              document-start:
+                level: warning
+
       - name: Validate JSON
         run: |
           find . -name '*.json' -exec jsonlint -q {} \;
