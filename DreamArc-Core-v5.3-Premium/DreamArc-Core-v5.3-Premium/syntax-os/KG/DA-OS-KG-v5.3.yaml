@@ -1,0 +1,9 @@
+id: "DA-OS-KG"
+version: "5.3"
+family: "KG"
+style_name: "IronBlaze"
+description: "Heroic rock for Kurogane Ren (KG family)."
+language: "ja"
+supports:
+  bpm: [140, 195]
+  emotion_curve: "standard_heroic"

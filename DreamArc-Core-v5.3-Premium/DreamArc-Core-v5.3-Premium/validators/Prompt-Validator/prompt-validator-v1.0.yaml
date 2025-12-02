@@ -1,0 +1,7 @@
+id: "PromptValidator"
+version: "1.0"
+description: "Validates assembled prompts before sending to model."
+checks:
+  - "bpm_present"
+  - "key_present"
+  - "language_present"

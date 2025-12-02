@@ -1,0 +1,12 @@
+id: "ExcludeEngine-Core"
+version: "5.3"
+mode: "os-driven"
+description: >
+  Exclude engine that prefers syntax-OS provided excludes.
+priority:
+  - "syntax_os"
+  - "prompt"
+min_safety_excludes:
+  - "explicit_violence"
+  - "hate_speech"
+  - "child_abuse"

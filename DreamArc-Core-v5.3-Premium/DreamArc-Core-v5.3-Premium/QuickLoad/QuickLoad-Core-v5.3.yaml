@@ -1,0 +1,18 @@
+version: "5.3"
+id: "QuickLoad-Core-v5.3"
+description: >
+  DreamArc QuickLoad core orchestrator (v5.3-Premium).
+  Loads SML, PromptLayer, Engines, Validators and DASF core.
+modules:
+  syntax_module_loader: "../syntax-os"
+  core_modules: "../core-modules"
+  engine_modules: "../engine-modules"
+  validators: "../validators"
+boot_sequence:
+  - step: "health_check"
+  - step: "load_sml"
+  - step: "run_sml_validator"
+  - step: "init_prompt_layer"
+  - step: "init_engines"
+  - step: "run_prompt_validator"
+  - step: "run_structure_validator"

@@ -1,0 +1,8 @@
+id: "EmotionOverflow-Core"
+version: "5.3"
+description: "Emotion curve presets for DreamArc v5.3-Premium."
+curves:
+  standard_heroic:
+    pattern: ["rise", "burst", "drive", "low", "surge", "build", "high"]
+  ballad:
+    pattern: ["low", "mid", "rise", "high", "release"]

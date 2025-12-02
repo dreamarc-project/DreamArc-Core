@@ -1,0 +1,6 @@
+id: "InterFlow-Core"
+version: "5.3"
+description: "Section-to-section flow hints."
+rules:
+  intro_to_verse: "soft_crossfade"
+  verse_to_chorus: "energy_jump"

@@ -1,0 +1,11 @@
+id: "ColorStory-Core"
+version: "5.3"
+description: "High-level story color / mood mapping for DreamArc songs."
+schema_version: "1.0"
+profiles:
+  heroic:
+    palette: ["crimson", "gold"]
+    energy: "high"
+  dark:
+    palette: ["indigo", "black"]
+    energy: "low"

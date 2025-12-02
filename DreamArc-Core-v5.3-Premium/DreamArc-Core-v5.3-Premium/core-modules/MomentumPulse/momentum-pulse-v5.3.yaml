@@ -1,0 +1,10 @@
+id: "MomentumPulse-Core"
+version: "5.3"
+description: "Rhythm / momentum hints for band arrangements."
+patterns:
+  heroic_fast:
+    bpm_range: [150, 190]
+    feel: "straight_8"
+  rock_mid:
+    bpm_range: [120, 150]
+    feel: "slight_push"

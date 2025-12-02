@@ -1,0 +1,9 @@
+id: "DA-OS-NA"
+version: "5.3"
+family: "NA"
+style_name: "NovaAnthem"
+description: "Powerful symphonic pop-rock OP style (NA family)."
+language: "ja"
+supports:
+  bpm: [130, 185]
+  emotion_curve: "standard_heroic"

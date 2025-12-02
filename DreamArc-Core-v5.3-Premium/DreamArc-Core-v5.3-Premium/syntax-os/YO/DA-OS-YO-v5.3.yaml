@@ -1,0 +1,9 @@
+id: "DA-OS-YO"
+version: "5.3"
+family: "YO"
+style_name: "PrismPop"
+description: "Story-driven, wave-like J-pop structure (YO family)."
+language: "ja"
+supports:
+  bpm: [120, 170]
+  emotion_curve: "standard_heroic"

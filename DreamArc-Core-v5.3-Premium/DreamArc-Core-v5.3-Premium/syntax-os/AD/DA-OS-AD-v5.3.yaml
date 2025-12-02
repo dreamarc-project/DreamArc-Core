@@ -1,0 +1,9 @@
+id: "DA-OS-AD"
+version: "5.3"
+family: "AD"
+style_name: "AggressiveDramaRock"
+description: "Dramatic rock style with strong accents (AD family)."
+language: "ja"
+supports:
+  bpm: [120, 180]
+  emotion_curve: "standard_heroic"

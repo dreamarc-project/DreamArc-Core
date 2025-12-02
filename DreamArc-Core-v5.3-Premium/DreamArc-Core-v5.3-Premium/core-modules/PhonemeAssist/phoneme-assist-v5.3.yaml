@@ -1,0 +1,8 @@
+id: "PhonemeAssist-Core"
+version: "5.3"
+description: "Phoneme-level tweaks for Japanese vocal rendering."
+rules:
+  particles:
+    は: "wa"
+    へ: "e"
+    を: "o"

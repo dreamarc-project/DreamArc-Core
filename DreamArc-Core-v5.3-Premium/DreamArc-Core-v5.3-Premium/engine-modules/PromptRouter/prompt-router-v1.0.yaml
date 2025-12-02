@@ -1,0 +1,8 @@
+id: "PromptRouter-Core"
+version: "1.0"
+description: "Routes high level request into PromptLayer + Engines."
+responsibilities:
+  - "parse_vocal_style"
+  - "resolve_syntax_os"
+  - "dispatch_prompt_layer"
+  - "dispatch_engines"

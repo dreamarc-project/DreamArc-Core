@@ -1,0 +1,9 @@
+id: "SML-Validator"
+version: "1.0"
+description: "Validates syntax-OS metadata."
+required_keys:
+  - "id"
+  - "version"
+  - "family"
+  - "style_name"
+  - "language"

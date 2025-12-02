@@ -1,0 +1,8 @@
+id: "StructureValidator"
+version: "1.0"
+description: "Validates DASF section structure."
+rules:
+  require_sections:
+    - "Intro"
+    - "Verse1"
+    - "Chorus1"
