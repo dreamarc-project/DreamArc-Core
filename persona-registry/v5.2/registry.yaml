@@ -1,6 +1,0 @@
-version: "5.2"
-personas:
-  - id: "Hoshizaki_Aria"
-    file: "personas/aria-v5.2.yaml"
-  - id: "Kurogane_Ren"
-    file: "personas/ren-v5.2.yaml"
